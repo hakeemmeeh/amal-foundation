@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { MissionBand } from "@/components/home/MissionBand";
 import { ProgramPillars } from "@/components/home/ProgramPillars";
 import { BackedByBand } from "@/components/home/BackedByBand";
-import { StorySection } from "@/components/home/StorySection";
 import { LatestStories } from "@/components/home/LatestStories";
 import { CTABand } from "@/components/home/CTABand";
 
