@@ -21,6 +21,15 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { 
@@ -40,7 +49,7 @@ export function Navbar() {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#F5F0E8]",
+          "fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-[#F5F0E8]",
           isScrolled
             ? "shadow-lg border-b border-[#D4A843] py-4"
             : "py-6 border-b border-transparent"
@@ -119,14 +128,17 @@ export function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Transparent toggle */}
             <div className="lg:hidden flex items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 text-[#1B2A6B] hover:text-[#D4A843] transition-colors"
+                className={cn(
+                  "p-2 text-[#1B2A6B] hover:text-[#D4A843] transition-all cursor-pointer z-[70]",
+                  isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+                )}
                 aria-label="Toggle Menu"
               >
-                {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+                <Menu size={32} />
               </button>
             </div>
           </div>
@@ -141,7 +153,7 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-50 bg-[#1B2A6B] backdrop-blur-xl flex flex-col pt-12"
+            className="fixed inset-0 z-[100] bg-[#1B2A6B] backdrop-blur-xl flex flex-col pt-12"
           >
             {/* Mobile Header Inside Menu */}
             <div className="flex items-center justify-between px-8 py-6 mb-12">
