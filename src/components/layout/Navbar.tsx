@@ -49,7 +49,7 @@ export function Navbar() {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-[#F5F0E8]",
+          "fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-[#F5F0E8] overflow-visible",
           isScrolled
             ? "shadow-lg border-b border-[#D4A843] py-4"
             : "py-6 border-b border-transparent"
@@ -57,16 +57,16 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
-            <Link href="/" className="relative block" onClick={() => setIsMobileMenuOpen(false)}>
-              <div className="relative h-[80px] w-[300px] md:h-[120px] md:w-[400px]">
-                <Image
-                  src="/images/logo.png"
-                  alt="Amal Group Foundation"
-                  fill
-                  className="object-contain object-left scale-125 md:scale-150 origin-left ml-4"
-                  priority
-                />
-              </div>
+            <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
+              <Image
+                src="/images/logo.png"
+                alt="Amal Group Foundation"
+                width={160}
+                height={64}
+                className="object-contain w-auto"
+                style={{ height: '64px', width: 'auto' }}
+                priority
+              />
             </Link>
 
             {/* Desktop Links */}

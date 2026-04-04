@@ -6,8 +6,8 @@ import Image from "next/image";
 export default function Programs() {
   return (
     <main className="bg-[#F5F0E8] min-h-screen">
-      {/* 3. A True "Hero" Header */}
-      <section className="pt-40 pb-24 md:pb-32 px-6 border-b border-[#D4A843]/30">
+      {/* 3. A True "Hero" Header - Increased padding to account for fixed navbar/enlarged logo */}
+      <section className="pt-52 pb-24 md:pb-32 px-6 border-b border-[#D4A843]/30">
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center gap-4 mb-8">
             <div className="h-[2px] w-16 bg-[#D4A843]" />
