@@ -57,17 +57,23 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-              <Image
-                src="/images/logo.png"
-                alt="Amal Group Foundation"
-                width={160}
-                height={64}
-                className="object-contain w-auto"
-                style={{ height: '64px', width: 'auto' }}
-                priority
-              />
-            </Link>
+            <div className="flex items-center h-10 w-64 relative">
+              <Link 
+                href="/" 
+                className="absolute -top-16 left-0 flex items-center" 
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Image
+                  src="/images/logo.png"
+                  alt="Amal Group Foundation"
+                  width={400}
+                  height={180}
+                  className="object-contain scale-150 origin-center"
+                  style={{ height: '180px', width: 'auto', maxWidth: 'none' }}
+                  priority
+                />
+              </Link>
+            </div>
 
             {/* Desktop Links */}
             <div className="hidden lg:flex items-center space-x-10">
@@ -157,12 +163,12 @@ export function Navbar() {
           >
             {/* Mobile Header Inside Menu */}
             <div className="flex items-center justify-between px-8 py-6 mb-12">
-               <div className="relative h-[48px] w-[180px]">
+               <div className="relative h-[120px] w-[280px]">
                 <Image
                   src="/images/logo.png"
                   alt="Amal Group Foundation"
                   fill
-                  className="object-contain object-left scale-150 origin-left"
+                  className="object-contain scale-[2.5] origin-left ml-8"
                   priority
                 />
               </div>
