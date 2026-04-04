@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Camera, Send, Globe, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -133,33 +133,53 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Full Screen Overlay */}
+      {/* Mobile Menu Full Screen Overlay - Premium Editorial Style */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#1B2A6B] flex flex-col justify-center items-center"
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", damping: 30, stiffness: 300 }}
+            className="fixed inset-0 z-50 bg-[#1B2A6B] backdrop-blur-xl flex flex-col pt-12"
           >
-            <div className="flex flex-col space-y-8 items-center text-center w-full px-6">
+            {/* Mobile Header Inside Menu */}
+            <div className="flex items-center justify-between px-8 py-6 mb-12">
+               <div className="relative h-[48px] w-[180px]">
+                <Image
+                  src="/images/logo.png"
+                  alt="Amal Group Foundation"
+                  fill
+                  className="object-contain object-left scale-150 origin-left"
+                  priority
+                />
+              </div>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-3 text-white hover:text-[#D4A843] transition-colors bg-white/5 rounded-full"
+                aria-label="Close Menu"
+              >
+                <X size={28} />
+              </button>
+            </div>
+
+            {/* Links Section */}
+            <div className="flex flex-col flex-grow px-10 space-y-4">
               {[...navLinks, { name: "Get Involved", href: "/get-involved" }].map((link, idx) => {
                 const isActive = pathname === link.href;
                 return (
                   <motion.div
                     key={link.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
-                    transition={{ delay: idx * 0.05 }}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + idx * 0.05 }}
                   >
                     <Link
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={cn(
-                        "text-3xl font-display font-bold uppercase tracking-widest transition-colors block w-full py-2",
-                        isActive ? "text-[#D4A843]" : "text-white hover:text-[#D4A843]"
+                        "text-4xl md:text-5xl font-display font-black uppercase tracking-tighter transition-all block w-full py-2 hover:translate-x-4 duration-300",
+                        isActive ? "text-[#D4A843] scale-105" : "text-white/40 hover:text-white"
                       )}
                     >
                       {link.name}
@@ -168,6 +188,29 @@ export function Navbar() {
                 );
               })}
             </div>
+
+            {/* Footer Section in Menu */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="mt-auto px-10 pb-16 pt-12 border-t border-white/10"
+            >
+              <div className="flex flex-col gap-6">
+                <span className="text-[#D4A843] font-mono text-[10px] uppercase font-bold tracking-[0.3em]">
+                  Follow Our Journey
+                </span>
+                <div className="flex items-center gap-8 text-white/60">
+                  <Link href="#" className="hover:text-white transition-colors"><Camera size={20} /></Link>
+                  <Link href="#" className="hover:text-white transition-colors"><Send size={20} /></Link>
+                  <Link href="#" className="hover:text-white transition-colors"><Globe size={20} /></Link>
+                  <Link href="#" className="hover:text-white transition-colors"><Mail size={20} /></Link>
+                </div>
+                <p className="text-white/30 text-[10px] font-mono uppercase tracking-widest mt-4">
+                  © 2025 Amal Group Foundation · Mogadishu · Garowe
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
