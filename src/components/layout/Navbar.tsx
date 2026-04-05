@@ -193,7 +193,7 @@ export function Navbar() {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={cn(
                         "text-4xl md:text-5xl font-display font-black uppercase tracking-tighter transition-all block w-full py-2 hover:translate-x-4 duration-300",
-                        isActive ? "text-[#D4A843] scale-105" : "text-[#1B2A6B]/40 hover:text-[#1B2A6B]"
+                        isActive ? "text-[#D4A843] scale-105" : "text-[#1B2A6B] hover:text-[#D4A843]"
                       )}
                     >
                       {link.name}
@@ -214,13 +214,13 @@ export function Navbar() {
                 <span className="text-[#D4A843] font-mono text-[10px] uppercase font-bold tracking-[0.3em]">
                   Follow Our Journey
                 </span>
-                <div className="flex items-center gap-8 text-[#1B2A6B]/60">
-                  <Link href="#" className="hover:text-[#1B2A6B] transition-colors"><Camera size={20} /></Link>
-                  <Link href="#" className="hover:text-[#1B2A6B] transition-colors"><Send size={20} /></Link>
-                  <Link href="#" className="hover:text-[#1B2A6B] transition-colors"><Globe size={20} /></Link>
-                  <Link href="#" className="hover:text-[#1B2A6B] transition-colors"><Mail size={20} /></Link>
+                <div className="flex items-center gap-8 text-[#1B2A6B]">
+                  <Link href="#" className="hover:text-[#D4A843] transition-colors"><Camera size={20} /></Link>
+                  <Link href="#" className="hover:text-[#D4A843] transition-colors"><Send size={20} /></Link>
+                  <Link href="#" className="hover:text-[#D4A843] transition-colors"><Globe size={20} /></Link>
+                  <Link href="#" className="hover:text-[#D4A843] transition-colors"><Mail size={20} /></Link>
                 </div>
-                <p className="text-[#1B2A6B]/30 text-[10px] font-mono uppercase tracking-widest mt-4">
+                <p className="text-[#1B2A6B] text-[10px] font-mono uppercase tracking-widest mt-4">
                   © 2025 Amal Foundation · Garowe, Somalia
                 </p>
               </div>

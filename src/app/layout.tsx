@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Amal Foundation",
     description: "Transforming lives across Somalia through education, healthcare, and economic empowerment.",
-    url: "https://amalgroufoundation.org",
+    url: "https://amalfoundation.org",
     siteName: "Amal Foundation",
     locale: "en_US",
     type: "website",
