@@ -10,13 +10,13 @@ const dmMono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "
 
 export const metadata: Metadata = {
   title: {
-    default: "Amal Group Foundation — Transforming Lives Across Somalia",
-    template: "%s | Amal Group Foundation",
+    default: "Amal Foundation — Transforming Lives Across Somalia",
+    template: "%s | Amal Foundation",
   },
   description:
-    "Amal Group Foundation is a private non-profit foundation committed to education, healthcare, humanitarian relief, and economic development across Somalia.",
+    "Amal Foundation is a private non-profit foundation committed to education, healthcare, humanitarian relief, and economic development across Somalia.",
   keywords: [
-    "Amal Group Foundation",
+    "Amal Foundation",
     "Somalia charity",
     "Garowe foundation",
     "Puntland NGO",
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     "Amal Group International",
   ],
   openGraph: {
-    title: "Amal Group Foundation",
+    title: "Amal Foundation",
     description: "Transforming lives across Somalia through education, healthcare, and economic empowerment.",
-    url: "https://amalgroufoundation.org",
-    siteName: "Amal Group Foundation",
+    url: "https://amalfoundation.org",
+    siteName: "Amal Foundation",
     locale: "en_US",
     type: "website",
   },

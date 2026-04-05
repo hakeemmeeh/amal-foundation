@@ -47,18 +47,18 @@ export default function StrategyPage() {
   ];
 
   const budget = [
-    { name: "Humanitarian Aid", value: 20000 },
-    { name: "Staff Salaries", value: 15000 },
-    { name: "Operations", value: 10000 },
-    { name: "Economic Dev", value: 10000 },
-    { name: "Micro-financing", value: 10000 },
-    { name: "Admin", value: 10000 },
-    { name: "Vocational Training", value: 7000 },
-    { name: "Scholarships", value: 6000 },
-    { name: "Education/Schools", value: 5000 },
+    { name: "Humanitarian Aid", value: 10000 },
+    { name: "Staff Salaries", value: 8000 },
+    { name: "Operations", value: 6000 },
+    { name: "Economic Dev", value: 6000 },
+    { name: "Micro-financing", value: 6000 },
+    { name: "Admin", value: 5000 },
+    { name: "Vocational Training", value: 4000 },
+    { name: "Scholarships", value: 3000 },
+    { name: "Education/Schools", value: 2000 },
   ];
 
-  const totalBudget = 93000;
+  const totalBudget = 50000;
 
   return (
     <main className="min-h-screen">
@@ -171,7 +171,7 @@ export default function StrategyPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              $93,000 Operational Budget — 2026 Plan
+              $50,000 USD Operational Budget — 2026 Plan
             </h2>
             <p className="text-[#D4A843] font-body text-lg">
               Budget plan as per Amal Foundation Operational Plan, 1 August 2025

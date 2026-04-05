@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { FeatureCarousel, type ImageSet } from "@/components/ui/animated-feature-carousel";
 
 const images: ImageSet = {
-    alt: "Amal Group Foundation in Action",
+    alt: "Amal Foundation in Action",
     step1img1: "/images/programs/education.png",
     step1img2: "/images/programs/humanitarian.png",
 

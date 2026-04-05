@@ -78,7 +78,7 @@ export function MissionBand() {
               </h2>
               
               <p className="text-[#64748B] text-[16px] md:text-[18px] leading-relaxed mb-8">
-                The Amal Group Foundation operates on a fundamental principle: sustainable prosperity is only possible when all communities have access to health, education, and economic empowerment. We channel targeted philanthropic capital to create enduring, multi-generational impact.
+                The Amal Foundation operates on a fundamental principle: sustainable prosperity is only possible when all communities have access to health, education, and economic empowerment. We channel targeted philanthropic capital to create enduring, multi-generational impact.
               </p>
 
               {/* Action List / Team Area */}

@@ -13,7 +13,7 @@ export function Footer() {
             <Link href="/" className="block mb-8 relative h-[100px] w-[350px] max-w-full">
               <Image
                 src="/images/logo.png"
-                alt="Amal Group Foundation"
+                alt="Amal Foundation"
                 fill
                 className="object-contain object-left scale-125 md:scale-150 origin-left"
               />
@@ -52,7 +52,7 @@ export function Footer() {
               <li className="flex items-start">
                 <Mail size={18} className="text-[#D4A843] mr-4 shrink-0 mt-0.5" />
                 <span className="text-white leading-relaxed">
-                  info@amalgroupfoundation.org
+                  info@amalfoundation.org
                 </span>
               </li>
               <li className="pt-4 border-t border-white/10">
@@ -61,7 +61,7 @@ export function Footer() {
                 </span>
                 <span className="text-white leading-relaxed block">
                   Amal Group International Ltd<br />
-                  P.O. Box 116793, Dubai, UAE
+                  Garowe, Somalia
                 </span>
               </li>
             </ul>
@@ -71,7 +71,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs font-mono tracking-widest text-white/90 font-bold">
-          <p>© 2025 Amal Group Foundation. All rights reserved.</p>
+          <p>© 2025 Amal Foundation. All rights reserved.</p>
         </div>
       </div>
     </footer>

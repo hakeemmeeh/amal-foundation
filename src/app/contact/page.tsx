@@ -33,7 +33,7 @@ export default function Contact() {
               <ul className="space-y-12">
                 {[
                   { title: "Physical Location", info: "Garowe Main Road, Garowe, Puntland, Somalia", icon: MapPin },
-                  { title: "Strategic Email", info: "info@amalgroupfoundation.org", icon: Mail },
+                  { title: "Strategic Email", info: "info@amalfoundation.org", icon: Mail },
                   { title: "Direct Helpline", info: "+252 (0) 90 000 0000", icon: Phone },
                 ].map((item, i) => {
                   const Icon = item.icon;

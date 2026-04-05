@@ -65,7 +65,7 @@ export function Navbar() {
               >
                 <Image
                   src="/images/logo.png"
-                  alt="Amal Group Foundation"
+                  alt="Amal Foundation"
                   width={400}
                   height={180}
                   className="object-contain scale-150 origin-center"
@@ -166,7 +166,7 @@ export function Navbar() {
                <div className="relative h-[120px] w-[280px]">
                 <Image
                   src="/images/logo.png"
-                  alt="Amal Group Foundation"
+                  alt="Amal Foundation"
                   fill
                   className="object-contain scale-[2.5] origin-left ml-8"
                   priority
@@ -225,7 +225,7 @@ export function Navbar() {
                   <Link href="#" className="hover:text-white transition-colors"><Mail size={20} /></Link>
                 </div>
                 <p className="text-white/30 text-[10px] font-mono uppercase tracking-widest mt-4">
-                  © 2025 Amal Group Foundation · Mogadishu · Garowe
+                  © 2025 Amal Foundation · Mogadishu · Garowe
                 </p>
               </div>
             </motion.div>

@@ -4,7 +4,7 @@ export const programs = [
     title: "Education & Healthcare",
     icon: "GraduationCap",
     shortDescription: "Building schools, awarding scholarships, and providing essential healthcare services across Somalia.",
-    fullDescription: "Amal Group Foundation is committed to expanding access to quality education and healthcare. Our programs focus on constructing and renovating schools, providing scholarships to underprivileged students, and delivering basic health services to underserved communities across all provinces of Somalia.",
+    fullDescription: "Amal Foundation is committed to expanding access to quality education and healthcare. Our programs focus on constructing and renovating schools, providing scholarships to underprivileged students, and delivering basic health services to underserved communities across all provinces of Somalia.",
     targets: [
       "Build and renovate 3 new schools",
       "Award 500 scholarships to disadvantaged students",
@@ -19,7 +19,7 @@ export const programs = [
     title: "Emergency Humanitarian Relief",
     icon: "Heart",
     shortDescription: "Rapid response to crises — delivering food, supplies, and essential aid to families in need.",
-    fullDescription: "When disaster strikes, Amal Group Foundation provides immediate emergency assistance. We deliver food rations, essential supplies, and emergency relief to affected families, coordinating with partner organizations for maximum impact during critical moments.",
+    fullDescription: "When disaster strikes, Amal Foundation provides immediate emergency assistance. We deliver food rations, essential supplies, and emergency relief to affected families, coordinating with partner organizations for maximum impact during critical moments.",
     targets: [
       "Provide emergency relief to 1,000 families",
       "Coordinate with partner organizations for rapid response",
