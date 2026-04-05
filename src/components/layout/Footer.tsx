@@ -10,12 +10,12 @@ export function Footer() {
           
           {/* Left Column: Logo & Description */}
           <div className="pr-12">
-            <Link href="/" className="block mb-8 relative h-[100px] w-[350px] max-w-full">
+            <Link href="/" className="block mb-8 relative h-20 w-64 max-w-full">
               <Image
                 src="/images/logo.png"
                 alt="Amal Foundation"
                 fill
-                className="object-contain object-left scale-125 md:scale-150 origin-left"
+                className="object-contain object-left"
               />
             </Link>
             <p className="text-[#1B2A6B] text-sm font-bold leading-relaxed max-w-sm">
