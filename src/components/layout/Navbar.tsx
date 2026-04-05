@@ -58,15 +58,15 @@ export function Navbar() {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center shrink-0">
-              <Image
-                src="/images/logo.png"
-                alt="Amal Foundation"
-                width={200}
-                height={72}
-                className="object-contain"
-                style={{ height: '72px', width: 'auto', maxWidth: '200px' }}
-                priority
-              />
+              <div style={{ height: '80px', width: '200px', position: 'relative' }}>
+                <Image
+                  src="/images/logo.png"
+                  alt="Amal Foundation"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
             </Link>
 
             {/* Desktop Links */}
@@ -158,15 +158,15 @@ export function Navbar() {
             {/* Mobile Header Inside Menu */}
             <div className="flex items-center justify-between px-8 py-10 mb-8 border-b border-[#D4A843]/10">
               <Link href="/" className="flex items-center shrink-0">
-                <Image
-                  src="/images/logo.png"
-                  alt="Amal Foundation"
-                  width={200}
-                  height={72}
-                  className="object-contain"
-                  style={{ height: '72px', width: 'auto', maxWidth: '200px' }}
-                  priority
-                />
+                <div style={{ height: '80px', width: '200px', position: 'relative' }}>
+                  <Image
+                    src="/images/logo.png"
+                    alt="Amal Foundation"
+                    fill
+                    className="object-contain object-left"
+                    priority
+                  />
+                </div>
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
