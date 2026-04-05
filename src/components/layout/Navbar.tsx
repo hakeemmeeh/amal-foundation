@@ -61,10 +61,10 @@ export function Navbar() {
               <Image
                 src="/images/logo.png"
                 alt="Amal Foundation"
-                width={100}
-                height={100}
+                width={200}
+                height={72}
                 className="object-contain"
-                style={{ height: '100px', width: 'auto' }}
+                style={{ height: '72px', width: 'auto', maxWidth: '200px' }}
                 priority
               />
             </Link>
@@ -161,10 +161,10 @@ export function Navbar() {
                 <Image
                   src="/images/logo.png"
                   alt="Amal Foundation"
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={72}
                   className="object-contain"
-                  style={{ height: '100px', width: 'auto' }}
+                  style={{ height: '72px', width: 'auto', maxWidth: '200px' }}
                   priority
                 />
               </Link>
