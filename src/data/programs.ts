@@ -12,7 +12,6 @@ export const programs = [
     ],
     budget: 11000,
     image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80",
-    stats: { schools: 3, scholarships: 500 },
   },
   {
     slug: "humanitarian-relief",
@@ -27,7 +26,6 @@ export const programs = [
     ],
     budget: 20000,
     image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
-    stats: { families: 1000 },
   },
   {
     slug: "financial-inclusion",
@@ -42,7 +40,6 @@ export const programs = [
     ],
     budget: 10000,
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
-    stats: { businesses: 50 },
   },
   {
     slug: "entrepreneurship",
@@ -57,6 +54,5 @@ export const programs = [
     ],
     budget: 7000,
     image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
-    stats: { youth: 200 },
   },
 ];

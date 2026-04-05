@@ -225,7 +225,7 @@ export function Navbar() {
                   <Link href="#" className="hover:text-white transition-colors"><Mail size={20} /></Link>
                 </div>
                 <p className="text-white/30 text-[10px] font-mono uppercase tracking-widest mt-4">
-                  © 2025 Amal Foundation · Mogadishu · Garowe
+                  © 2025 Amal Foundation · Garowe, Somalia
                 </p>
               </div>
             </motion.div>

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Shield, Award, Users, Globe2, HeartHandshake } from "lucide-react";
+import { Award, Users, Globe2, HeartHandshake } from "lucide-react";
 import Image from "next/image";
 
 export default function About() {
@@ -9,7 +9,6 @@ export default function About() {
     { name: "Dahir Ismail Mohamed", role: "Vice Chairman" },
     { name: "Jama Mohamed Issa", role: "Director" },
     { name: "Abdidahir Ali Hersi", role: "Director" },
-    { name: "Dr. Abdiqafar Yasin Farah", role: "Director" },
     { name: "Yusuf Ali Juma", role: "Director" },
     { name: "Yusuf Ahmed Dahir", role: "Director" },
     { name: "Omar Ali Abdallah", role: "Board Secretary" },
@@ -46,7 +45,7 @@ export default function About() {
               <div className="h-[2px] w-12 bg-[#D4A843]" />
             </div>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.05]">
-              Amal Group <br /> Foundation
+              Amal <br /> Foundation
             </h1>
           </motion.div>
         </div>
@@ -70,15 +69,41 @@ export default function About() {
                 A Foundation Built on Trust
               </h2>
               <p className="font-body text-[#64748B] text-base leading-relaxed mb-6">
-                Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia on 23 April 2025. Authorized under Board Resolution AGI/42/2025, the Foundation is headquartered at Garowe Main Road, Garowe, Puntland, Somalia — with international parent offices in Dubai, UAE.
+                Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia on 23 April 2025. Authorized under Board Resolution AGI/42/2025, the Foundation is headquartered at Garowe Main Road, Garowe, Puntland, Somalia.
               </p>
-
               <a href="#board" className="text-[#1B2A6B] font-bold uppercase tracking-widest hover:text-[#D4A843] transition-colors border-b-2 border-transparent hover:border-[#D4A843] pb-1">
                 Meet the Board →
               </a>
             </motion.div>
 
-
+            {/* Right Column */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <div className="bg-white border-2 border-[#1B2A6B] rounded-xl p-8 md:p-10 shadow-2xl relative">
+                <div className="absolute top-0 right-0 p-6 opacity-10">
+                  <Award size={80} className="text-[#1B2A6B]" />
+                </div>
+                <h4 className="font-display font-bold text-xl text-[#1B2A6B] mb-2 uppercase tracking-wide">
+                  Board Resolution No: AGI/42/2025
+                </h4>
+                <p className="font-mono text-sm text-[#D4A843] font-bold mb-8">
+                  April 18–23, 2025
+                </p>
+                <div className="w-12 h-[2px] bg-[#D4A843] mb-8" />
+                <p className="font-display text-2xl text-[#1A1A2E] leading-relaxed italic mb-8 relative z-10">
+                  "It was resolved that the establishment of Amal Foundation, under Amal Group International, to be based in Somalia and branches abroad."
+                </p>
+                <div className="mt-8 pt-8 border-t border-gray-200">
+                  <p className="font-mono text-sm uppercase text-[#64748B] font-bold">
+                    Signed <br /> Omar Ali Abdallah <br /> Board Secretary
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

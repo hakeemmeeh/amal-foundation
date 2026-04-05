@@ -29,7 +29,7 @@ export default function BlogStoryPage() {
 
       By equipping the youth with technology and modern pedagogical tools, we are not just educating individuals; we are building the foundation of a digital economy. Our scholarships and vocational training programs continue to expand, ensuring that no student is left behind due to financial barriers.`,
       date: "July 22, 2025",
-      author: "Dr. Abdiqafar Yasin",
+      author: "Amal Foundation Team",
       tag: "Education",
       image: "/images/about/school.png"
     },

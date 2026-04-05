@@ -34,7 +34,7 @@ export function BackedByBand() {
             Backed by Amal Group's Legacy in Somalia
           </h2>
           <p className="font-body text-slate-300 text-base md:text-[16px] max-w-3xl mx-auto mb-16 leading-relaxed">
-            Amal Foundation is the charitable arm of Amal Group International Limited — one of Somalia's established business groups operating through Amal Bank and Amal Express. With a history of annual charitable contributions dating back to 2006, Amal Group has consistently invested in the communities it serves.
+            Amal Foundation is the charitable arm of Amal Group International Limited — one of Somalia's established business groups with a diverse portfolio spanning financial services, telecommunications, real estate, and trade. With a history of annual charitable contributions dating back to 2006, Amal Group has consistently invested in the communities it serves.
           </p>
         </motion.div>
 
@@ -52,8 +52,12 @@ export function BackedByBand() {
 
           {/* Tile 2 */}
           <motion.div variants={itemVariants} className="bg-[#1e2f75] border border-white/5 p-8 rounded-xl flex flex-col items-center justify-center text-center hover:bg-[#233580] transition-colors">
-            <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">2 Companies</span>
-            <span className="text-white font-body text-sm tracking-wide">Amal Bank + Amal Express</span>
+            <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">5 Companies</span>
+            <div className="flex flex-col gap-1 mt-2">
+              {["Amtel", "MyCash", "Amal Mastercard", "Amal Real Estate & Construction", "Amal Trade"].map((co) => (
+                <span key={co} className="text-white font-body text-xs tracking-wide leading-relaxed">{co}</span>
+              ))}
+            </div>
           </motion.div>
 
           {/* Tile 3 */}

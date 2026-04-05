@@ -21,7 +21,7 @@ export default function BlogPage() {
       title: "Empowering Somali Students Through Digital Literacy",
       excerpt: "Technical education is the backbone of future growth. Read how our new computer lab in Mogadishu is changing lives for over 200 youths.",
       date: "July 22, 2025",
-      author: "Dr. Abdiqafar Yasin",
+      author: "Amal Foundation Team",
       tag: "Education",
       image: "/images/about/school.png"
     },
