@@ -7,33 +7,33 @@ export default function Programs() {
   return (
     <main className="bg-[#F5F0E8] min-h-screen">
       {/* 3. A True "Hero" Header - Increased padding to account for fixed navbar/enlarged logo */}
-      <section className="pt-52 pb-24 md:pb-32 px-6 border-b border-[#D4A843]/30">
+      <section className="border-b border-[#D4A843]/30 px-6 pb-16 pt-40 sm:pt-44 md:pb-32 md:pt-52">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center gap-4 mb-8">
+          <div className="mb-6 flex items-center gap-4 md:mb-8">
             <div className="h-[2px] w-16 bg-[#D4A843]" />
             <span className="text-[#D4A843] font-mono tracking-[0.2em] uppercase text-sm font-bold">
               Our Compass
             </span>
           </div>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-[#1B2A6B] leading-[1.05]">
-            Architecting <br className="hidden md:block"/> Real Impact.
+          <h1 className="font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight text-[#1B2A6B] sm:text-5xl md:text-7xl lg:text-8xl">
+            Architecting <br className="hidden md:block" /> Real Impact.
           </h1>
-          <p className="mt-8 text-slate-600 text-xl md:text-2xl max-w-2xl font-light leading-relaxed">
+          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-slate-600 md:mt-8 md:text-xl lg:text-2xl">
             We structure our philanthropy around four core pillars designed to dismantle systemic barriers and foster absolute self-reliance.
           </p>
         </div>
       </section>
 
       {/* Alternating Rhythm */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="space-y-24 md:space-y-32">
+      <section className="py-16 md:py-32">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="space-y-16 md:space-y-28 lg:space-y-32">
             {programs.map((program, index) => {
               const isReversed = index % 2 !== 0;
               return (
                 <div 
                   key={program.slug} 
-                  className={`flex flex-col gap-10 md:gap-16 ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} items-center group`}
+                  className={`group flex flex-col items-center gap-8 md:gap-14 lg:gap-16 ${isReversed ? "md:flex-row-reverse" : "md:flex-row"}`}
                 >
                   {/* Image Container */}
                   <div className="w-full md:w-1/2 overflow-hidden rounded-[24px] shadow-2xl relative group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-700 ease-out">

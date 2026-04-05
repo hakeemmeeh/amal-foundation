@@ -110,21 +110,30 @@ export const amalFooter7Defaults: Footer7Props = {
     },
   ],
   socialLinks: [
-    { icon: <Camera className="size-5" />, href: "#", label: "Instagram" },
-    { icon: <Send className="size-5" />, href: "#", label: "Telegram" },
-    { icon: <Globe className="size-5" />, href: "#", label: "Website" },
     {
       icon: <Mail className="size-5" />,
       href: "mailto:info@amalfoundation.org",
-      label: "Email",
+      label: "Email Amal Foundation",
+    },
+    {
+      icon: <Globe className="size-5" />,
+      href: "/contact",
+      label: "Contact and office location",
     },
   ],
   copyright: `© ${new Date().getFullYear()} Amal Foundation. All rights reserved.`,
   legalLinks: [
-    { name: "Parent: Amal Group International Ltd", href: "/about" },
-    { name: "Garowe, Somalia", href: "/contact" },
+    { name: "About & governance", href: "/about" },
+    { name: "Contact & location", href: "/contact" },
   ],
 };
+
+function filterRealSocialLinks(
+  links: NonNullable<Footer7Props["socialLinks"]> | undefined,
+) {
+  if (!links?.length) return [];
+  return links.filter((l) => l.href && l.href !== "#");
+}
 
 function FooterInlineLink({
   href,
@@ -137,20 +146,32 @@ function FooterInlineLink({
   children: React.ReactNode;
   "aria-label"?: string;
 }) {
-  const external = href.startsWith("http") || href.startsWith("mailto:");
+  const isMail = href.startsWith("mailto:");
+  const isHttp = href.startsWith("http");
+  const external = isHttp || isMail;
+
   if (external) {
     return (
       <a
         href={href}
         className={className}
-        rel="noopener noreferrer"
+        rel={isHttp ? "noopener noreferrer" : undefined}
         aria-label={ariaLabel}
-        target={href.startsWith("mailto:") ? undefined : "_blank"}
+        target={isHttp ? "_blank" : undefined}
       >
         {children}
       </a>
     );
   }
+
+  if (href === "#") {
+    return (
+      <span className={className} aria-hidden="true">
+        {children}
+      </span>
+    );
+  }
+
   return (
     <Link href={href} className={className} aria-label={ariaLabel}>
       {children}
@@ -172,6 +193,8 @@ export function Footer7({
   legalLinks = defaultLegalLinks,
   className,
 }: Footer7Props) {
+  const usableSocial = filterRealSocialLinks(socialLinks);
+
   return (
     <footer
       className={cn(
@@ -180,7 +203,7 @@ export function Footer7({
       )}
     >
       <div className="container mx-auto max-w-7xl px-6">
-        <div className="flex w-full flex-col justify-between gap-8 lg:flex-row lg:items-start lg:gap-8 lg:text-left">
+        <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:gap-10 lg:text-left">
           <div className="flex w-full flex-col justify-between gap-4 font-body lg:max-w-md lg:items-start">
             <div className="flex flex-wrap items-center gap-2 lg:justify-start">
               <FooterInlineLink
@@ -198,27 +221,27 @@ export function Footer7({
                 />
               </FooterInlineLink>
             </div>
-            <p className="max-w-xl text-sm text-muted-foreground">
-              {description}
-            </p>
-            <ul className="flex flex-wrap items-center gap-4 text-muted-foreground">
-              {socialLinks.map((social, idx) => (
-                <li
-                  key={`${social.label}-${idx}`}
-                  className="text-primary/90 transition-colors hover:text-primary"
-                >
-                  <FooterInlineLink
-                    href={social.href}
-                    aria-label={social.label}
-                    className="inline-flex text-inherit"
+            <p className="max-w-xl text-sm text-muted-foreground">{description}</p>
+            {usableSocial.length > 0 && (
+              <ul className="flex flex-wrap items-center gap-4 text-muted-foreground">
+                {usableSocial.map((social, idx) => (
+                  <li
+                    key={`${social.label}-${idx}`}
+                    className="text-primary/90 transition-colors hover:text-primary"
                   >
-                    {social.icon}
-                  </FooterInlineLink>
-                </li>
-              ))}
-            </ul>
+                    <FooterInlineLink
+                      href={social.href}
+                      aria-label={social.label}
+                      className="inline-flex text-inherit"
+                    >
+                      {social.icon}
+                    </FooterInlineLink>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          <div className="grid w-full gap-8 sm:grid-cols-2 md:grid-cols-3 lg:max-w-3xl lg:gap-10">
+          <div className="grid w-full grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-8 md:grid-cols-3 md:gap-10 lg:max-w-3xl">
             {sections?.map((section, sectionIdx) => (
               <div key={`${section.title}-${sectionIdx}`}>
                 <h3 className="font-display mb-2 text-xs uppercase tracking-wider text-[#1B2A6B]/85">

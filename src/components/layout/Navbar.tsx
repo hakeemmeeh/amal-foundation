@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Camera, Send, Globe, Mail } from "lucide-react";
@@ -7,10 +7,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-/** Sized to overflow the compact nav bar visually without expanding its layout height. */
-function NavbarLogo() {
+/** `menuOpen`: even larger mark in the full-screen drawer header. */
+function NavbarLogo({ menuOpen = false }: { menuOpen?: boolean }) {
   return (
-    <div className="relative h-16 w-44 sm:h-[112px] sm:w-[312px] md:h-[198px] md:w-[488px]">
+    <div
+      className={cn(
+        "relative shrink-0",
+        menuOpen
+          ? "h-36 w-[min(22rem,88vw)] sm:h-40 sm:w-[min(24rem,90vw)] md:h-44 md:w-[min(26rem,92vw)] lg:h-[198px] lg:w-[488px]"
+          : "h-32 w-[min(19rem,calc(100vw-3.5rem))] sm:h-36 sm:w-[min(21rem,calc(100vw-4rem))] md:h-[140px] md:w-[min(24rem,calc(100vw-4rem))] lg:h-[198px] lg:w-[488px]",
+      )}
+    >
       <Image
         src="/images/logo.png"
         alt="Amal Foundation"
@@ -47,18 +54,24 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { 
-      name: "About", 
+    {
+      name: "About",
       href: "/about",
       dropdown: [
         { name: "Who We Are", href: "/about" },
-        { name: "Our Plan", href: "/strategy" }
-      ]
+        { name: "Our Plan", href: "/strategy" },
+      ],
     },
     { name: "Programs", href: "/programs" },
     { name: "Blog", href: "/blog" },
-    { name: "Get Involved", href: "/get-involved" },
-    { name: "Contact", href: "/contact" },
+    {
+      name: "Contact",
+      href: "/contact",
+      dropdown: [
+        { name: "Reach us", href: "/contact" },
+        { name: "Get Involved", href: "/get-involved" },
+      ],
+    },
   ];
 
   return (
@@ -71,9 +84,12 @@ export function Navbar() {
             : "py-2.5 border-b border-transparent"
         )}
       >
-        <div className="container mx-auto px-6">
-          <div className="flex h-12 items-center justify-between overflow-visible md:h-14">
-            <Link href="/" className="relative z-10 flex shrink-0 items-center">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex min-h-14 items-center justify-between gap-2 overflow-visible py-1 lg:h-14 lg:min-h-0 lg:py-0">
+            <Link
+              href="/"
+              className="relative z-[65] flex min-w-0 flex-1 items-center overflow-visible lg:z-10 lg:flex-initial"
+            >
               <NavbarLogo />
             </Link>
 
@@ -81,7 +97,10 @@ export function Navbar() {
             <div className="hidden lg:flex items-center space-x-10">
               <div className="flex items-center space-x-8">
                 {navLinks.map((link) => {
-                  const isActive = pathname === link.href;
+                  const isActive =
+                    pathname === link.href ||
+                    (!!link.dropdown &&
+                      link.dropdown.some((s) => pathname === s.href));
                   const isDropdown = !!link.dropdown;
                   
                   return (
@@ -136,8 +155,8 @@ export function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Menu Button - Transparent toggle */}
-            <div className="lg:hidden flex items-center">
+            {/* Mobile Menu Button */}
+            <div className="flex shrink-0 items-center lg:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={cn(
@@ -166,7 +185,7 @@ export function Navbar() {
             {/* Mobile Header Inside Menu */}
             <div className="flex items-center justify-between px-8 py-10 mb-8 border-b border-[#D4A843]/10">
               <Link href="/" className="relative z-10 flex shrink-0 items-center">
-                <NavbarLogo />
+                <NavbarLogo menuOpen />
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -178,29 +197,72 @@ export function Navbar() {
             </div>
 
             {/* Links Section */}
-            <div className="flex flex-col flex-grow px-10 space-y-4">
+            <div className="flex grow flex-col space-y-2 overflow-y-auto px-6 sm:px-10">
               {navLinks.map((link, idx) => {
                 const isActive = pathname === link.href;
+                const isSubActive = link.dropdown?.some((s) => pathname === s.href);
                 return (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 + idx * 0.05 }}
-                  >
-                    <Link
-                      href={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={cn(
-                        "text-4xl md:text-5xl font-display font-black uppercase tracking-tighter transition-all block w-full py-2 hover:translate-x-4 duration-300",
-                        isActive ? "text-[#D4A843] scale-105" : "text-[#1B2A6B] hover:text-[#D4A843]"
-                      )}
+                  <Fragment key={link.name}>
+                    <motion.div
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 + idx * 0.05 }}
                     >
-                      {link.name}
-                    </Link>
-                  </motion.div>
+                      <Link
+                        href={link.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={cn(
+                          "block w-full py-2 font-display text-3xl font-black uppercase tracking-tighter transition-all duration-300 hover:translate-x-2 sm:text-4xl md:text-5xl md:hover:translate-x-4",
+                          isActive || isSubActive
+                            ? "scale-[1.02] text-[#D4A843]"
+                            : "text-[#1B2A6B] hover:text-[#D4A843]",
+                        )}
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                    {link.dropdown && (
+                      <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.12 + idx * 0.05 }}
+                        className="mb-4 ml-1 space-y-2 border-l-2 border-[#D4A843]/35 pl-4"
+                      >
+                        {link.dropdown.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={cn(
+                              "block py-1.5 font-body text-sm font-bold uppercase tracking-widest transition-colors",
+                              pathname === sub.href
+                                ? "text-[#D4A843]"
+                                : "text-[#1B2A6B]/80 hover:text-[#D4A843]",
+                            )}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </Fragment>
                 );
               })}
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45 }}
+                className="pt-6"
+              >
+                <Link
+                  href="/get-involved"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex w-full items-center justify-center rounded-full bg-[#D4A843] py-4 text-center text-sm font-bold uppercase tracking-widest text-[#1B2A6B] shadow-lg transition-all active:bg-[#1B2A6B] active:text-white"
+                >
+                  Donate
+                </Link>
+              </motion.div>
             </div>
 
             {/* Footer Section in Menu */}

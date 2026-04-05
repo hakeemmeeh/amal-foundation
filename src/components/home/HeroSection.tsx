@@ -14,13 +14,14 @@ const impactStats = [
 export function HeroSection() {
   return (
     <section className="relative flex w-full flex-col overflow-hidden bg-[#1B2A6B] pt-48 md:pt-[300px]">
-      {/* Charitics-Style Right-Aligned Image with Wavy Mask */}
-      <div className="absolute right-0 top-0 z-0 h-full w-full overflow-hidden md:top-10 md:h-[calc(100%-2.5rem)] md:w-[50%]">
+      {/* Right hero art — inset from top so faces clear the fixed navbar; crop biased for portrait focal point */}
+      <div className="absolute right-0 top-14 z-0 h-[calc(100%-3.5rem)] w-full overflow-hidden sm:top-16 sm:h-[calc(100%-4rem)] md:top-[5.5rem] md:h-[calc(100%-5.5rem)] md:w-1/2 lg:top-24 lg:h-[calc(100%-6rem)]">
         <Image
           src="/images/home/hero-collage.png"
           alt="Amal Humanitarian Efforts in Somalia"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[50%_38%] sm:object-[52%_40%] md:object-[56%_42%]"
+          sizes="(max-width: 768px) 100vw, 50vw"
           priority
         />
 
