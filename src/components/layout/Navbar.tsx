@@ -57,23 +57,17 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center h-24 w-80 relative">
-              <Link 
-                href="/" 
-                className="flex items-center" 
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <Image
-                  src="/images/logo.png"
-                  alt="Amal Foundation"
-                  width={350}
-                  height={120}
-                  className="object-contain"
-                  style={{ height: '96px', width: 'auto' }}
-                  priority
-                />
-              </Link>
-            </div>
+            <Link href="/" className="flex items-center shrink-0">
+              <Image
+                src="/images/logo.png"
+                alt="Amal Foundation"
+                width={280}
+                height={72}
+                className="object-contain"
+                style={{ height: '72px', width: 'auto' }}
+                priority
+              />
+            </Link>
 
             {/* Desktop Links */}
             <div className="hidden lg:flex items-center space-x-10">
@@ -163,15 +157,17 @@ export function Navbar() {
           >
             {/* Mobile Header Inside Menu */}
             <div className="flex items-center justify-between px-8 py-10 mb-8 border-b border-white/5">
-               <div className="relative h-32 w-80">
+              <Link href="/" className="flex items-center shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
                 <Image
                   src="/images/logo.png"
                   alt="Amal Foundation"
-                  fill
-                  className="object-contain origin-left"
+                  width={280}
+                  height={72}
+                  className="object-contain"
+                  style={{ height: '72px', width: 'auto' }}
                   priority
                 />
-              </div>
+              </Link>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-3 text-white hover:text-[#D4A843] transition-colors bg-white/5 rounded-full"
