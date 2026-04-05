@@ -153,10 +153,10 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-[100] bg-[#1B2A6B] backdrop-blur-xl flex flex-col pt-12"
+            className="fixed inset-0 z-[100] bg-[#F5F0E8] flex flex-col pt-12"
           >
             {/* Mobile Header Inside Menu */}
-            <div className="flex items-center justify-between px-8 py-10 mb-8 border-b border-white/5">
+            <div className="flex items-center justify-between px-8 py-10 mb-8 border-b border-[#D4A843]/10">
               <Link href="/" className="flex items-center shrink-0">
                 <Image
                   src="/images/logo.png"
@@ -170,7 +170,7 @@ export function Navbar() {
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-3 text-white hover:text-[#D4A843] transition-colors bg-white/5 rounded-full"
+                className="p-3 text-[#1B2A6B] hover:text-[#D4A843] transition-colors bg-[#1B2A6B]/5 rounded-full"
                 aria-label="Close Menu"
               >
                 <X size={28} />
@@ -193,7 +193,7 @@ export function Navbar() {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={cn(
                         "text-4xl md:text-5xl font-display font-black uppercase tracking-tighter transition-all block w-full py-2 hover:translate-x-4 duration-300",
-                        isActive ? "text-[#D4A843] scale-105" : "text-white/40 hover:text-white"
+                        isActive ? "text-[#D4A843] scale-105" : "text-[#1B2A6B]/40 hover:text-[#1B2A6B]"
                       )}
                     >
                       {link.name}
@@ -208,19 +208,19 @@ export function Navbar() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-auto px-10 pb-16 pt-12 border-t border-white/10"
+              className="mt-auto px-10 pb-16 pt-12 border-t border-[#D4A843]/10"
             >
               <div className="flex flex-col gap-6">
                 <span className="text-[#D4A843] font-mono text-[10px] uppercase font-bold tracking-[0.3em]">
                   Follow Our Journey
                 </span>
-                <div className="flex items-center gap-8 text-white/60">
-                  <Link href="#" className="hover:text-white transition-colors"><Camera size={20} /></Link>
-                  <Link href="#" className="hover:text-white transition-colors"><Send size={20} /></Link>
-                  <Link href="#" className="hover:text-white transition-colors"><Globe size={20} /></Link>
-                  <Link href="#" className="hover:text-white transition-colors"><Mail size={20} /></Link>
+                <div className="flex items-center gap-8 text-[#1B2A6B]/60">
+                  <Link href="#" className="hover:text-[#1B2A6B] transition-colors"><Camera size={20} /></Link>
+                  <Link href="#" className="hover:text-[#1B2A6B] transition-colors"><Send size={20} /></Link>
+                  <Link href="#" className="hover:text-[#1B2A6B] transition-colors"><Globe size={20} /></Link>
+                  <Link href="#" className="hover:text-[#1B2A6B] transition-colors"><Mail size={20} /></Link>
                 </div>
-                <p className="text-white/30 text-[10px] font-mono uppercase tracking-widest mt-4">
+                <p className="text-[#1B2A6B]/30 text-[10px] font-mono uppercase tracking-widest mt-4">
                   © 2025 Amal Foundation · Garowe, Somalia
                 </p>
               </div>
