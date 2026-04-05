@@ -57,7 +57,7 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center h-16 w-64 relative">
+            <div className="flex items-center h-24 w-80 relative">
               <Link 
                 href="/" 
                 className="flex items-center" 
@@ -66,10 +66,10 @@ export function Navbar() {
                 <Image
                   src="/images/logo.png"
                   alt="Amal Foundation"
-                  width={250}
-                  height={80}
+                  width={350}
+                  height={120}
                   className="object-contain"
-                  style={{ height: '64px', width: 'auto' }}
+                  style={{ height: '96px', width: 'auto' }}
                   priority
                 />
               </Link>
@@ -162,8 +162,8 @@ export function Navbar() {
             className="fixed inset-0 z-[100] bg-[#1B2A6B] backdrop-blur-xl flex flex-col pt-12"
           >
             {/* Mobile Header Inside Menu */}
-            <div className="flex items-center justify-between px-8 py-6 mb-8 border-b border-white/5">
-               <div className="relative h-20 w-72">
+            <div className="flex items-center justify-between px-8 py-10 mb-8 border-b border-white/5">
+               <div className="relative h-32 w-80">
                 <Image
                   src="/images/logo.png"
                   alt="Amal Foundation"

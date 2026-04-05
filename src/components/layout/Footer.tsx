@@ -10,7 +10,7 @@ export function Footer() {
           
           {/* Left Column: Logo & Description */}
           <div className="pr-12">
-            <Link href="/" className="block mb-8 relative h-24 w-80 max-w-full">
+            <Link href="/" className="block mb-8 relative h-32 w-80 max-w-full">
               <Image
                 src="/images/logo.png"
                 alt="Amal Foundation"
