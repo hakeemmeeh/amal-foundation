@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar, User } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
 
 export function LatestStories() {
   const stories = [
@@ -24,8 +24,8 @@ export function LatestStories() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#F5F0E8] overflow-hidden">
-      <div className="container mx-auto px-6 max-w-7xl">
+    <section className="overflow-hidden bg-[#F5F0E8] pt-24 pb-0 md:pt-32">
+      <div className="container mx-auto max-w-7xl px-6 pb-12 md:pb-16">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[#D4A843] font-mono font-bold tracking-widest uppercase text-xs mb-4 block">Impact Live</span>

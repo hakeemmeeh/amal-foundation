@@ -6,6 +6,10 @@
   --color-deep-navy-hover: #152255;
   --color-warm-gold: #D4A843;
   --color-warm-gold-hover: #B8922E;
+  /* shadcn-aligned tokens (used by components under components/ui) */
+  --color-primary: #1b2a6b;
+  --color-primary-foreground: #f5f0e8;
+  --color-muted-foreground: #1b2a6bcc;
   --color-sunrise: #E8913A;
   --color-sand: #F5F0E8;
   --color-ivory: #FAFAF5;

@@ -7,6 +7,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
+/** Sized to overflow the compact nav bar visually without expanding its layout height. */
+function NavbarLogo() {
+  return (
+    <div className="relative h-16 w-44 sm:h-[112px] sm:w-[312px] md:h-[198px] md:w-[488px]">
+      <Image
+        src="/images/logo.png"
+        alt="Amal Foundation"
+        fill
+        className="object-contain object-left"
+        priority
+      />
+    </div>
+  );
+}
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,6 +57,7 @@ export function Navbar() {
     },
     { name: "Programs", href: "/programs" },
     { name: "Blog", href: "/blog" },
+    { name: "Get Involved", href: "/get-involved" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -51,22 +67,14 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-[#F5F0E8] overflow-visible",
           isScrolled
-            ? "shadow-lg border-b border-[#D4A843] py-4"
-            : "py-6 border-b border-transparent"
+            ? "shadow-lg border-b border-[#D4A843] py-2"
+            : "py-2.5 border-b border-transparent"
         )}
       >
         <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center shrink-0">
-              <div style={{ height: '80px', width: '200px', position: 'relative' }}>
-                <Image
-                  src="/images/logo.png"
-                  alt="Amal Foundation"
-                  fill
-                  className="object-contain object-left"
-                  priority
-                />
-              </div>
+          <div className="flex h-12 items-center justify-between overflow-visible md:h-14">
+            <Link href="/" className="relative z-10 flex shrink-0 items-center">
+              <NavbarLogo />
             </Link>
 
             {/* Desktop Links */}
@@ -122,9 +130,9 @@ export function Navbar() {
 
               <Link
                 href="/get-involved"
-                className="px-6 py-3 bg-[#D4A843] text-[#1B2A6B] text-xs font-bold uppercase tracking-widest rounded-full hover:bg-[#1B2A6B] hover:text-white transition-all shadow-lg"
+                className="rounded-full bg-[#D4A843] px-6 py-3 text-xs font-bold uppercase tracking-widest text-[#1B2A6B] shadow-lg transition-all hover:bg-[#1B2A6B] hover:text-white"
               >
-                Get Involved
+                Donate
               </Link>
             </div>
 
@@ -157,16 +165,8 @@ export function Navbar() {
           >
             {/* Mobile Header Inside Menu */}
             <div className="flex items-center justify-between px-8 py-10 mb-8 border-b border-[#D4A843]/10">
-              <Link href="/" className="flex items-center shrink-0">
-                <div style={{ height: '80px', width: '200px', position: 'relative' }}>
-                  <Image
-                    src="/images/logo.png"
-                    alt="Amal Foundation"
-                    fill
-                    className="object-contain object-left"
-                    priority
-                  />
-                </div>
+              <Link href="/" className="relative z-10 flex shrink-0 items-center">
+                <NavbarLogo />
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -179,7 +179,7 @@ export function Navbar() {
 
             {/* Links Section */}
             <div className="flex flex-col flex-grow px-10 space-y-4">
-              {[...navLinks, { name: "Get Involved", href: "/get-involved" }].map((link, idx) => {
+              {navLinks.map((link, idx) => {
                 const isActive = pathname === link.href;
                 return (
                   <motion.div
@@ -221,7 +221,7 @@ export function Navbar() {
                   <Link href="#" className="hover:text-[#D4A843] transition-colors"><Mail size={20} /></Link>
                 </div>
                 <p className="text-[#1B2A6B] text-[10px] font-mono uppercase tracking-widest mt-4">
-                  © 2025 Amal Foundation · Garowe, Somalia
+                  © 2026 Amal Foundation · Garowe, Somalia
                 </p>
               </div>
             </motion.div>

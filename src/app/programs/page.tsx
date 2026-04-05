@@ -51,7 +51,7 @@ export default function Programs() {
                   {/* Text Container */}
                   <div className="w-full md:w-1/2 flex flex-col justify-center">
                     <span className="text-[#D4A843] font-mono font-bold tracking-widest uppercase text-xs mb-4">
-                      0{index + 1} // Program
+                      0{index + 1} · Program
                     </span>
                     <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[#1B2A6B] tracking-tight">
                       {program.title}

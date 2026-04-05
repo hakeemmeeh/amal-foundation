@@ -20,7 +20,12 @@ export function BackedByBand() {
   };
 
   return (
-    <section className="bg-[#1B2A6B] w-full py-24 px-6 relative overflow-hidden" ref={ref}>
+    <section
+      id="our-foundation"
+      aria-labelledby="our-foundation-heading"
+      className="relative w-full overflow-hidden bg-[#1B2A6B] px-6 py-24"
+      ref={ref}
+    >
       <div className="container mx-auto max-w-5xl text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,16 +35,19 @@ export function BackedByBand() {
           <p className="text-[#D4A843] font-mono text-sm uppercase tracking-[0.2em] mb-4 font-bold">
             Our Foundation
           </p>
-          <h2 className="font-display text-3xl md:text-[32px] text-white mb-6 leading-tight">
-            Backed by Amal Group's Legacy in Somalia
+          <h2
+            id="our-foundation-heading"
+            className="font-display mb-6 text-3xl leading-tight text-white md:text-[32px]"
+          >
+            Backed by Amal Group&apos;s Legacy in Somalia
           </h2>
-          <p className="font-body text-slate-300 text-base md:text-[16px] max-w-3xl mx-auto mb-16 leading-relaxed">
-            Amal Foundation is the charitable arm of Amal Group International Limited — one of Somalia's established business groups with a diverse portfolio spanning financial services, telecommunications, real estate, and trade. With a history of annual charitable contributions dating back to 2006, Amal Group has consistently invested in the communities it serves.
+          <p className="font-body mx-auto mb-16 max-w-3xl text-base leading-relaxed text-slate-300 md:text-[16px]">
+            Amal Foundation is the charitable arm of Amal Group International Limited — one of Somalia&apos;s established business groups with a diverse portfolio spanning financial services, telecommunications, real estate, and trade. With a history of annual charitable contributions dating back to 2006, Amal Group has consistently invested in the communities it serves.
           </p>
         </motion.div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        <motion.div
+          className="grid grid-cols-1 gap-6 md:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -62,7 +70,7 @@ export function BackedByBand() {
 
           {/* Tile 3 */}
           <motion.div variants={itemVariants} className="bg-[#1e2f75] border border-white/5 p-8 rounded-xl flex flex-col items-center justify-center text-center hover:bg-[#233580] transition-colors">
-            <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">April 2025</span>
+            <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">April 2006</span>
             <span className="text-white font-body text-sm tracking-wide">Foundation incorporated in Somalia</span>
           </motion.div>
         </motion.div>

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { CheckCircle2, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 import Image from "next/image";
 
 export default function StrategyPage() {

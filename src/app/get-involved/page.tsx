@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, HeartPulse, GraduationCap, Handshake, Users, Mail } from "lucide-react";
+import { ArrowRight, HeartPulse, Handshake, Users, Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function GetInvolved() {

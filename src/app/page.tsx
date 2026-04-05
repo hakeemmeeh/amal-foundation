@@ -17,13 +17,11 @@ export default function Home() {
       {/* 3. The 4 Pillars */}
       <ProgramPillars />
 
-      {/* 4. Backed By Legacy Band */}
+      {/* 4. “Our Foundation” — Backed by Amal Group (navy band + stat tiles) */}
       <BackedByBand />
-      
-      {/* 5. Latest Impact Stories */}
+
+      {/* 5–6. Latest stories + CTA (fused visually) */}
       <LatestStories />
-      
-      {/* 6. Call to Action Band */}
       <CTABand />
     </main>
   );

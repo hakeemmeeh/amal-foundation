@@ -1,7 +1,6 @@
 "use client";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 const activeCauses = [
   {

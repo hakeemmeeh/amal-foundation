@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Calendar, User, Tag, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Share2, User } from "lucide-react";
 
 export default function BlogStoryPage() {
   const { id } = useParams();

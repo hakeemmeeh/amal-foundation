@@ -18,7 +18,7 @@ export default function Contact() {
               Reach Out. <br className="hidden md:block"/> Get Connected.
             </h1>
             <p className="mt-8 text-[#64748B] text-xl md:text-2xl max-w-2xl font-light leading-relaxed">
-              Whether you have questions about programs, donation transparency, or partnership opportunities, we're here to facilitate the conversation.
+              Whether you have questions about programs, donation transparency, or partnership opportunities, we&apos;re here to facilitate the conversation.
             </p>
           </ScrollReveal>
         </div>

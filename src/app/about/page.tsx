@@ -22,7 +22,7 @@ export default function About() {
   return (
     <main className="bg-[#1B2A6B] min-h-screen pb-32 overflow-hidden">
       {/* Hero */}
-      <section className="relative h-[75vh] min-h-[650px] flex items-center justify-center overflow-hidden pt-32 bg-[#1B2A6B]">
+      <section className="relative flex min-h-[650px] h-[75vh] items-center justify-center overflow-hidden bg-[#1B2A6B] pt-40 md:pt-48">
         <Image 
           src="/images/about/hero.png"
           alt="Amal Foundation Legacy"
@@ -69,7 +69,7 @@ export default function About() {
                 A Foundation Built on Trust
               </h2>
               <p className="font-body text-[#64748B] text-base leading-relaxed mb-6">
-                Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia on 23 April 2025. Authorized under Board Resolution AGI/42/2025, the Foundation is headquartered at Garowe Main Road, Garowe, Puntland, Somalia.
+                Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia in April 2006. Authorized under Board Resolution AGI/42/2006, the Foundation is headquartered at Garowe Main Road, Garowe, Puntland, Somalia.
               </p>
               <a href="#board" className="text-[#1B2A6B] font-bold uppercase tracking-widest hover:text-[#D4A843] transition-colors border-b-2 border-transparent hover:border-[#D4A843] pb-1">
                 Meet the Board →
@@ -88,14 +88,14 @@ export default function About() {
                   <Award size={80} className="text-[#1B2A6B]" />
                 </div>
                 <h4 className="font-display font-bold text-xl text-[#1B2A6B] mb-2 uppercase tracking-wide">
-                  Board Resolution No: AGI/42/2025
+                  Board Resolution No: AGI/42/2006
                 </h4>
                 <p className="font-mono text-sm text-[#D4A843] font-bold mb-8">
-                  April 18–23, 2025
+                  April 2006
                 </p>
                 <div className="w-12 h-[2px] bg-[#D4A843] mb-8" />
                 <p className="font-display text-2xl text-[#1A1A2E] leading-relaxed italic mb-8 relative z-10">
-                  "It was resolved that the establishment of Amal Foundation, under Amal Group International, to be based in Somalia and branches abroad."
+                  &ldquo;It was resolved that the establishment of Amal Foundation, under Amal Group International, to be based in Somalia and branches abroad.&rdquo;
                 </p>
                 <div className="mt-8 pt-8 border-t border-gray-200">
                   <p className="font-mono text-sm uppercase text-[#64748B] font-bold">
@@ -122,7 +122,7 @@ export default function About() {
               Helping each other can make the world better
             </h2>
             <p className="text-slate-300 text-lg md:text-xl font-light leading-relaxed mb-10">
-              In a world often marked by division and hardship, the simple act of helping one another holds incredible power. Whether it's offering your time, resources, or compassion, supporting others sparks meaningful change across the globe.
+              In a world often marked by division and hardship, the simple act of helping one another holds incredible power. Whether it&apos;s offering your time, resources, or compassion, supporting others sparks meaningful change across the globe.
             </p>
             <ul className="space-y-6">
               {[
@@ -159,7 +159,7 @@ export default function About() {
           <div className="bg-[#D4A843] p-12 md:p-16 rounded-[24px] shadow-2xl relative overflow-hidden group">
             <h3 className="font-display text-4xl font-semibold mb-6 text-[#1B2A6B]">Our Vision</h3>
             <p className="text-[#1A1A2E] text-lg md:text-xl font-medium leading-relaxed relative z-10">
-              "To foster community development and poverty reduction through highly targeted, sustainable programs across Somalia and the broader region."
+              &ldquo;To foster community development and poverty reduction through highly targeted, sustainable programs across Somalia and the broader region.&rdquo;
             </p>
           </div>
           <div className="bg-[#F5F0E8] p-12 md:p-16 rounded-[24px] shadow-xl border border-white/10 relative overflow-hidden group">
@@ -218,7 +218,7 @@ export default function About() {
                 <div className="bg-[#D4A843] text-[#1B2A6B] px-8 md:px-12 py-5 text-lg font-bold rounded-[16px] shadow-xl inline-block">
                   Amal Foundation
                 </div>
-                <p className="text-xs font-mono font-semibold tracking-widest text-[#D4A843] mt-5 uppercase">Charitable Arm (Est. 2025)</p>
+                <p className="text-xs font-mono font-semibold tracking-widest text-[#D4A843] mt-5 uppercase">Charitable Arm (Est. 2006)</p>
               </div>
             </div>
           </div>
