@@ -7,21 +7,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-/** `menuOpen`: even larger mark in the full-screen drawer header. */
+/** Mobile bar: wide + tall box so horizontal wordmarks scale up (object-contain). Drawer: larger still. */
 function NavbarLogo({ menuOpen = false }: { menuOpen?: boolean }) {
   return (
     <div
       className={cn(
         "relative shrink-0",
         menuOpen
-          ? "h-36 w-[min(22rem,88vw)] sm:h-40 sm:w-[min(24rem,90vw)] md:h-44 md:w-[min(26rem,92vw)] lg:h-[198px] lg:w-[488px]"
-          : "h-32 w-[min(19rem,calc(100vw-3.5rem))] sm:h-36 sm:w-[min(21rem,calc(100vw-4rem))] md:h-[140px] md:w-[min(24rem,calc(100vw-4rem))] lg:h-[198px] lg:w-[488px]",
+          ? "h-48 w-[min(94vw,28rem)] sm:h-52 sm:w-[min(96vw,30rem)] md:h-56 md:w-[min(94vw,34rem)] lg:h-[198px] lg:w-[488px]"
+          : "h-44 w-[calc(100vw-2.75rem)] max-w-[34rem] sm:h-48 sm:w-[calc(100vw-3rem)] md:h-52 md:w-[min(32rem,calc(100vw-4.5rem))] lg:h-[198px] lg:w-[488px]",
       )}
     >
       <Image
         src="/images/logo.png"
         alt="Amal Foundation"
         fill
+        sizes="(max-width: 1023px) 100vw, 488px"
         className="object-contain object-left"
         priority
       />
@@ -84,11 +85,11 @@ export function Navbar() {
             : "py-2.5 border-b border-transparent"
         )}
       >
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex min-h-14 items-center justify-between gap-2 overflow-visible py-1 lg:h-14 lg:min-h-0 lg:py-0">
+        <div className="container mx-auto max-w-[100vw] px-2.5 sm:px-6">
+          <div className="flex min-h-[4.5rem] items-center justify-between gap-0.5 overflow-visible py-1 sm:min-h-[4.75rem] lg:h-14 lg:min-h-0 lg:gap-2 lg:py-0">
             <Link
               href="/"
-              className="relative z-[65] flex min-w-0 flex-1 items-center overflow-visible lg:z-10 lg:flex-initial"
+              className="relative z-[65] flex shrink-0 items-center overflow-visible [-webkit-tap-highlight-color:transparent] lg:z-10"
             >
               <NavbarLogo />
             </Link>
