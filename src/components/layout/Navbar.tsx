@@ -162,13 +162,13 @@ export function Navbar() {
             className="fixed inset-0 z-[100] bg-[#1B2A6B] backdrop-blur-xl flex flex-col pt-12"
           >
             {/* Mobile Header Inside Menu */}
-            <div className="flex items-center justify-between px-8 py-6 mb-12">
-               <div className="relative h-[120px] w-[280px]">
+            <div className="flex items-center justify-between px-8 py-6 mb-8 border-b border-white/5 bg-white/5">
+               <div className="relative h-12 w-48">
                 <Image
                   src="/images/logo.png"
                   alt="Amal Foundation"
                   fill
-                  className="object-contain scale-[2.5] origin-left ml-8"
+                  className="object-contain origin-left"
                   priority
                 />
               </div>
