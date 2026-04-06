@@ -20,7 +20,7 @@ export default function BlogStoryPage() {
       date: "August 15, 2025",
       author: "Foundation Field Team",
       tag: "Development",
-      image: "https://images.unsplash.com/photo-1729355796906-10a9809e0864?q=80&w=1600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?q=80&w=1600&auto=format&fit=crop"
     },
     {
       id: "2",

@@ -30,8 +30,8 @@ export function MissionBand() {
                 }}
               >
                 <Image 
-                  src="https://images.unsplash.com/photo-1729355796906-10a9809e0864?q=80&w=800&auto=format&fit=crop" 
-                  alt="Community member in Mogadishu, Somalia" 
+                  src="https://images.unsplash.com/photo-1774870292182-d59afbebf09e?q=80&w=800&auto=format&fit=crop" 
+                  alt="Somali schoolgirl, Mogadishu" 
                   fill 
                   className="object-cover hover:scale-105 transition-transform duration-700" 
                 />
@@ -100,10 +100,10 @@ export function MissionBand() {
                 {/* Optional mini team avatars here */}
                 <div className="flex -space-x-3 bg-gray-50 py-2 px-4 rounded-full border border-gray-100">
                   <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden relative shadow-sm">
-                    <Image src="https://images.unsplash.com/photo-1774870088892-714199a76e56?w=100&q=80&auto=format&fit=crop" alt="Somali youth" fill className="object-cover" />
+                    <Image src="https://images.unsplash.com/photo-1729355796906-10a9809e0864?w=100&q=80&auto=format&fit=crop" alt="Somali woman in Mogadishu" fill className="object-cover" />
                   </div>
                   <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden relative shadow-sm z-10">
-                    <Image src="https://images.unsplash.com/photo-1664874322412-66e589265c15?w=100&q=80&auto=format&fit=crop" alt="Somali child smiling" fill className="object-cover" />
+                    <Image src="https://images.unsplash.com/photo-1610500797053-578e615a0153?w=100&q=80&auto=format&fit=crop" alt="Somali boy" fill className="object-cover" />
                   </div>
                   <div className="w-10 h-10 rounded-full border-2 border-white bg-[#1B2A6B] flex items-center justify-center relative z-20">
                     <span className="text-white text-xs font-bold">+</span>

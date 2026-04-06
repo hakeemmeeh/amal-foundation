@@ -11,7 +11,7 @@ export const programs = [
       "Strengthen basic healthcare access in underserved and rural areas",
     ],
     budget: 11000,
-    image: "https://images.unsplash.com/photo-1602181047856-c07f6c5d6353?w=800&q=80&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?w=800&q=80&auto=format&fit=crop",
   },
   {
     slug: "humanitarian-relief",
@@ -25,7 +25,7 @@ export const programs = [
       "Strengthen pathways to deliver aid reliably across regions",
     ],
     budget: 20000,
-    image: "https://images.unsplash.com/photo-1774869264697-55f091850ab5?w=800&q=80&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1646031881272-a914e54af276?w=800&q=80&auto=format&fit=crop",
   },
   {
     slug: "financial-inclusion",
@@ -39,7 +39,7 @@ export const programs = [
       "Encourage long-term, sustainable enterprise growth",
     ],
     budget: 10000,
-    image: "https://images.unsplash.com/photo-1737742462464-b26eb948dfeb?w=800&q=80&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1655104293575-2b3bc063251d?w=800&q=80&auto=format&fit=crop",
   },
   {
     slug: "entrepreneurship",
@@ -53,6 +53,6 @@ export const programs = [
       "Open pathways toward employment and self-reliance",
     ],
     budget: 7000,
-    image: "https://images.unsplash.com/photo-1602181064453-8fce7eed9e2d?w=800&q=80&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1610500795224-fb86b02926d7?w=800&q=80&auto=format&fit=crop",
   },
 ];

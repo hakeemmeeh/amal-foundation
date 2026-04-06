@@ -15,7 +15,7 @@ export function CTABand() {
         className="absolute inset-0 overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1610500796626-3363840d6ebc?q=80&w=2670&auto=format&fit=crop')",
+            "url('https://images.unsplash.com/photo-1602181047856-c07f6c5d6353?q=80&w=2670&auto=format&fit=crop')",
         }}
       >
         <div className="absolute inset-0 bg-[#1B2A6B]/68 mix-blend-multiply" />
