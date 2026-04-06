@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 /**
- * Compact layout box keeps the nav strip short on mobile; below `lg`, the mark is scaled up with
- * transform so it reads larger without increasing navbar height (layout box unchanged).
+ * Mobile (< md): layout box stays h-24 so the nav row + hamburger height is unchanged; the Image is
+ * scaled so the wordmark reads larger at ~375–390px. md+ uses md:h-32 / lg heights with no scale.
  */
 function NavbarLogo({ menuOpen = false }: { menuOpen?: boolean }) {
   return (
@@ -18,7 +18,7 @@ function NavbarLogo({ menuOpen = false }: { menuOpen?: boolean }) {
         "relative shrink-0",
         menuOpen
           ? "h-44 w-[min(94vw,28rem)] sm:h-48 sm:w-[min(96vw,30rem)] md:h-52 md:w-[min(94vw,34rem)] lg:h-[198px] lg:w-[488px]"
-          : "h-24 w-full max-w-[34rem] sm:h-28 md:h-32 md:max-w-[32rem] lg:h-[198px] lg:w-[488px] lg:max-w-none",
+          : "h-24 w-full max-w-[34rem] md:h-32 md:max-w-[32rem] lg:h-[198px] lg:w-[488px] lg:max-w-none",
       )}
     >
       {menuOpen ? (
@@ -31,12 +31,12 @@ function NavbarLogo({ menuOpen = false }: { menuOpen?: boolean }) {
           priority
         />
       ) : (
-        <div className="absolute inset-0 max-lg:origin-[12%_50%] max-lg:scale-[1.2] lg:scale-100">
+        <div className="absolute inset-0 max-md:origin-[12%_50%] max-md:scale-[1.42] md:scale-100">
           <Image
             src="/images/logo.png"
             alt="Amal Foundation"
             fill
-            sizes="(max-width: 1023px) 100vw, 488px"
+            sizes="(max-width: 768px) 100vw, 488px"
             className="pointer-events-none object-contain object-left select-none"
             priority
           />
