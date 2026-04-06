@@ -2,7 +2,7 @@
 import { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Camera, Send, Globe, Mail } from "lucide-react";
+import { Menu, ArrowLeft, ChevronDown, Camera, Send, Globe, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -17,7 +17,7 @@ function NavbarLogo({ menuOpen = false }: { menuOpen?: boolean }) {
       className={cn(
         "relative shrink-0",
         menuOpen
-          ? "h-44 w-[min(94vw,28rem)] sm:h-48 sm:w-[min(96vw,30rem)] md:h-52 md:w-[min(94vw,34rem)] lg:h-[198px] lg:w-[488px]"
+          ? "h-32 w-[min(88vw,22rem)] sm:h-36 sm:w-[min(90vw,24rem)] md:h-40 md:w-[min(92vw,26rem)] lg:h-[198px] lg:w-[488px]"
           : "h-24 w-full max-w-[34rem] md:h-32 md:max-w-[32rem] lg:h-[198px] lg:w-[488px] lg:max-w-none",
       )}
     >
@@ -67,6 +67,15 @@ export function Navbar() {
     } else {
       document.body.style.overflow = 'unset';
     }
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, [isMobileMenuOpen]);
 
   const navLinks = [
@@ -200,24 +209,37 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-[100] bg-[#F5F0E8] flex flex-col pt-12"
+            className="fixed inset-0 z-[100] flex min-h-0 flex-col bg-[#F5F0E8]"
           >
-            {/* Mobile Header Inside Menu */}
-            <div className="flex items-center justify-between px-8 py-10 mb-8 border-b border-[#D4A843]/10">
-              <Link href="/" className="relative z-10 flex shrink-0 items-center">
+            {/* Mobile Header — sticky; clear “return” action (bar hamburger is hidden under overlay) */}
+            <div className="sticky top-0 z-10 flex shrink-0 items-center justify-between gap-3 border-b border-[#D4A843]/15 bg-[#F5F0E8] px-4 py-3 pt-[max(0.5rem,env(safe-area-inset-top))] sm:px-6">
+              <Link
+                href="/"
+                className="relative z-10 flex min-w-0 flex-1 items-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 <NavbarLogo menuOpen />
               </Link>
               <button
+                type="button"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-3 text-[#1B2A6B] hover:text-[#D4A843] transition-colors bg-[#1B2A6B]/5 rounded-full"
-                aria-label="Close Menu"
+                className="flex shrink-0 items-center gap-2 rounded-full border-2 border-[#1B2A6B] bg-[#F5F0E8] px-3 py-2 text-[#1B2A6B] shadow-sm transition-colors hover:border-[#D4A843] hover:text-[#D4A843] active:scale-[0.98]"
+                aria-label="Return to the page"
               >
-                <X size={28} />
+                <ArrowLeft
+                  size={20}
+                  strokeWidth={2.25}
+                  className="shrink-0"
+                  aria-hidden
+                />
+                <span className="max-w-[9rem] text-left text-[10px] font-bold uppercase leading-tight tracking-[0.18em] sm:max-w-none sm:text-xs sm:tracking-[0.2em]">
+                  Back to site
+                </span>
               </button>
             </div>
 
             {/* Links Section */}
-            <div className="flex grow flex-col space-y-2 overflow-y-auto px-6 sm:px-10">
+            <div className="flex min-h-0 flex-1 flex-col space-y-1 overflow-y-auto overscroll-contain px-4 pt-3 pb-4 sm:px-8">
               {navLinks.map((link, idx) => {
                 const isActive = pathname === link.href;
                 const isSubActive = link.dropdown?.some((s) => pathname === s.href);
@@ -232,7 +254,7 @@ export function Navbar() {
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={cn(
-                          "block w-full py-2 font-display text-3xl font-black uppercase tracking-tighter transition-all duration-300 hover:translate-x-2 sm:text-4xl md:text-5xl md:hover:translate-x-4",
+                          "block w-full py-1.5 font-display text-3xl font-black uppercase tracking-tighter transition-all duration-300 hover:translate-x-2 sm:py-2 sm:text-4xl md:text-5xl md:hover:translate-x-4",
                           isActive || isSubActive
                             ? "scale-[1.02] text-[#D4A843]"
                             : "text-[#1B2A6B] hover:text-[#D4A843]",
@@ -246,7 +268,7 @@ export function Navbar() {
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.12 + idx * 0.05 }}
-                        className="mb-4 ml-1 space-y-2 border-l-2 border-[#D4A843]/35 pl-4"
+                        className="mb-2 ml-1 space-y-1 border-l-2 border-[#D4A843]/35 pl-4"
                       >
                         {link.dropdown.map((sub) => (
                           <Link
@@ -273,7 +295,7 @@ export function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.45 }}
-                className="pt-6"
+                className="pt-4"
               >
                 <Link
                   href="/get-involved"
@@ -290,7 +312,7 @@ export function Navbar() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-auto px-10 pb-16 pt-12 border-t border-[#D4A843]/10"
+              className="mt-auto border-t border-[#D4A843]/10 px-6 pb-10 pt-8 sm:px-10 sm:pb-16"
             >
               <div className="flex flex-col gap-6">
                 <span className="text-[#D4A843] font-mono text-[10px] uppercase font-bold tracking-[0.3em]">
