@@ -27,22 +27,22 @@ export default function StrategyPage() {
     {
       title: "Expand Reach",
       desc: "Grow programs to new regions of Somalia, launch Amal Waqf Fund",
-      img: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=800&q=80"
+      img: "https://images.unsplash.com/photo-1774869597727-16fcb9a84b4f?w=800&q=80&auto=format&fit=crop"
     },
     {
       title: "Build Partnerships",
       desc: "Engage with NGOs, UN agencies, and international donors",
-      img: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800&q=80"
+      img: "https://images.unsplash.com/photo-1655104293575-2b3bc063251d?w=800&q=80&auto=format&fit=crop"
     },
     {
       title: "Strengthen Programs",
       desc: "Scale youth, women, health, and microfinance initiatives",
-      img: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80"
+      img: "https://images.unsplash.com/photo-1646031881272-a914e54af276?w=800&q=80&auto=format&fit=crop"
     },
     {
       title: "Monitor & Report",
       desc: "Publish annual impact reports with verified data",
-      img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80"
+      img: "https://images.unsplash.com/photo-1664874317355-b474aca8eed9?w=800&q=80&auto=format&fit=crop"
     }
   ];
 

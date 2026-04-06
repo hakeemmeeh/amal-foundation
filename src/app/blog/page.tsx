@@ -14,7 +14,7 @@ export default function BlogPage() {
       date: "August 15, 2025",
       author: "Foundation Field Team",
       tag: "Development",
-      image: "https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=1200&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1729355796906-10a9809e0864?q=80&w=1200&auto=format&fit=crop"
     },
     {
       id: "2",
