@@ -80,7 +80,7 @@ export const amalFooter7Defaults: Footer7Props = {
     title: "Amal Foundation",
   },
   description:
-    "A private non-profit corporate foundation incorporated in Somalia. Established April 2006. Headquartered in Garowe, Puntland — improving lives through education, health, and opportunity.",
+    "The charitable arm of Amal Group (active since 2006). Amal Foundation incorporated in Somalia, April 2025. Headquartered in Garowe, Puntland — improving lives through education, health, and opportunity.",
   sections: [
     {
       title: "Explore",

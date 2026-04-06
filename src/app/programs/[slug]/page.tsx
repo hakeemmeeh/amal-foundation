@@ -52,7 +52,7 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
           </p>
 
           <div className="bg-white p-8 rounded-sm my-12 border-l-4 border-l-[#D4A843] shadow-sm">
-            <h3 className="font-display text-2xl text-[#1A1A2E] mt-0 mb-6 font-semibold">2026 Key Targets</h3>
+            <h3 className="font-display text-2xl text-[#1A1A2E] mt-0 mb-6 font-semibold">Key focus areas</h3>
             <ul className="mb-0 space-y-3">
               {program.targets.map((target, idx) => (
                 <li key={idx} className="flex items-start text-[#64748B]">

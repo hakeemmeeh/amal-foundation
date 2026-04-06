@@ -69,7 +69,7 @@ export default function About() {
                 A Foundation Built on Trust
               </h2>
               <p className="font-body text-[#64748B] text-base leading-relaxed mb-6">
-                Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia in April 2006. Authorized under Board Resolution AGI/42/2006, the Foundation is headquartered at Garowe Main Road, Garowe, Puntland, Somalia.
+                Amal Group has built businesses and community commitment in Somalia since 2006. Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia in April 2025, with headquarters at Garowe Main Road, Garowe, Puntland, Somalia.
               </p>
               <a href="#board" className="text-[#1B2A6B] font-bold uppercase tracking-widest hover:text-[#D4A843] transition-colors border-b-2 border-transparent hover:border-[#D4A843] pb-1">
                 Meet the Board →
@@ -88,10 +88,10 @@ export default function About() {
                   <Award size={80} className="text-[#1B2A6B]" />
                 </div>
                 <h4 className="font-display font-bold text-xl text-[#1B2A6B] mb-2 uppercase tracking-wide">
-                  Board Resolution No: AGI/42/2006
+                  Board resolution — Amal Foundation incorporation
                 </h4>
                 <p className="font-mono text-sm text-[#D4A843] font-bold mb-8">
-                  April 2006
+                  April 2025
                 </p>
                 <div className="w-12 h-[2px] bg-[#D4A843] mb-8" />
                 <p className="font-display text-2xl text-[#1A1A2E] leading-relaxed italic mb-8 relative z-10">
@@ -211,14 +211,14 @@ export default function About() {
                 <div className="bg-[#1B2A6B] text-white px-8 md:px-12 py-5 text-lg font-bold rounded-[16px] shadow-xl inline-block">
                   Amal Group Int.
                 </div>
-                <p className="text-xs font-mono font-semibold tracking-widest text-[#64748B] mt-5 uppercase">Parent Company</p>
+                <p className="text-xs font-mono font-semibold tracking-widest text-[#64748B] mt-5 uppercase">Parent company · since 2006</p>
               </div>
               <div className="w-1 md:w-20 h-16 md:h-[2px] bg-[#D4A843]"></div>
               <div className="text-center z-10">
                 <div className="bg-[#D4A843] text-[#1B2A6B] px-8 md:px-12 py-5 text-lg font-bold rounded-[16px] shadow-xl inline-block">
                   Amal Foundation
                 </div>
-                <p className="text-xs font-mono font-semibold tracking-widest text-[#D4A843] mt-5 uppercase">Charitable Arm (Est. 2006)</p>
+                <p className="text-xs font-mono font-semibold tracking-widest text-[#D4A843] mt-5 uppercase">Charitable arm · Est. Apr 2025</p>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const impactStats = [
-  { label: "Established", value: "Apr 2006" },
+  { label: "Established", value: "Apr 2025" },
   { label: "Headquarters", value: "Garowe, Puntland" },
   { label: "Focus areas", value: "4 program pillars" },
   { label: "Parent organization", value: "Amal Group International" },

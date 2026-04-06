@@ -6,9 +6,9 @@ export const programs = [
     shortDescription: "Building schools, awarding scholarships, and providing essential healthcare services across Somalia.",
     fullDescription: "Amal Foundation is committed to expanding access to quality education and healthcare. Our programs focus on constructing and renovating schools, providing scholarships to underprivileged students, and delivering basic health services to underserved communities across all provinces of Somalia.",
     targets: [
-      "Build and renovate 3 new schools",
-      "Award 500 scholarships to disadvantaged students",
-      "Provide basic healthcare access in rural areas",
+      "Build and improve school infrastructure where communities need it most",
+      "Expand access to scholarships and learning support for students facing barriers",
+      "Strengthen basic healthcare access in underserved and rural areas",
     ],
     budget: 11000,
     image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80",
