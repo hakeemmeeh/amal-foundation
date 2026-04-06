@@ -7,25 +7,41 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-/** Mobile bar: wide + tall box so horizontal wordmarks scale up (object-contain). Drawer: larger still. */
+/**
+ * Compact layout box keeps the nav strip short on mobile; below `lg`, the mark is scaled up with
+ * transform so it reads larger without increasing navbar height (layout box unchanged).
+ */
 function NavbarLogo({ menuOpen = false }: { menuOpen?: boolean }) {
   return (
     <div
       className={cn(
         "relative shrink-0",
         menuOpen
-          ? "h-48 w-[min(94vw,28rem)] sm:h-52 sm:w-[min(96vw,30rem)] md:h-56 md:w-[min(94vw,34rem)] lg:h-[198px] lg:w-[488px]"
-          : "h-44 w-full max-w-[34rem] sm:h-48 md:h-52 md:max-w-[32rem] lg:h-[198px] lg:w-[488px] lg:max-w-none",
+          ? "h-44 w-[min(94vw,28rem)] sm:h-48 sm:w-[min(96vw,30rem)] md:h-52 md:w-[min(94vw,34rem)] lg:h-[198px] lg:w-[488px]"
+          : "h-24 w-full max-w-[34rem] sm:h-28 md:h-32 md:max-w-[32rem] lg:h-[198px] lg:w-[488px] lg:max-w-none",
       )}
     >
-      <Image
-        src="/images/logo.png"
-        alt="Amal Foundation"
-        fill
-        sizes="(max-width: 1023px) 100vw, 488px"
-        className="object-contain object-left"
-        priority
-      />
+      {menuOpen ? (
+        <Image
+          src="/images/logo.png"
+          alt="Amal Foundation"
+          fill
+          sizes="(max-width: 1023px) 100vw, 488px"
+          className="object-contain object-left"
+          priority
+        />
+      ) : (
+        <div className="absolute inset-0 max-lg:origin-[12%_50%] max-lg:scale-[1.2] lg:scale-100">
+          <Image
+            src="/images/logo.png"
+            alt="Amal Foundation"
+            fill
+            sizes="(max-width: 1023px) 100vw, 488px"
+            className="pointer-events-none object-contain object-left select-none"
+            priority
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -81,12 +97,14 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-[#F5F0E8] overflow-visible",
           isScrolled
-            ? "shadow-lg border-b border-[#D4A843] py-1.5 lg:py-2"
-            : "border-b border-transparent py-1.5 lg:py-2.5"
+            ? "shadow-lg border-b border-[#D4A843] max-lg:py-0 lg:py-2"
+            : "border-b border-transparent max-lg:py-0 lg:py-2.5"
         )}
       >
-        <div className="container mx-auto max-w-[100vw] pl-3 pr-4 pt-[env(safe-area-inset-top)] sm:px-6 sm:pr-6">
-          <div className="flex min-h-0 items-center justify-between gap-2 overflow-visible lg:h-14 lg:min-h-0 lg:gap-2 lg:py-0">
+        <div
+          className="container mx-auto max-w-[100vw] max-lg:overflow-x-clip pl-2.5 pr-3 sm:px-6 sm:pr-6 max-lg:pt-[max(0px,env(safe-area-inset-top))] max-lg:pb-0.5"
+        >
+          <div className="flex min-h-0 items-center justify-between gap-1.5 overflow-visible lg:h-14 lg:min-h-0 lg:gap-2 lg:py-0">
             <Link
               href="/"
               className="relative z-[65] flex min-w-0 flex-1 items-center overflow-visible [-webkit-tap-highlight-color:transparent] lg:z-10 lg:block lg:min-w-0 lg:flex-none"
@@ -156,18 +174,18 @@ export function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Menu Button — inset from viewport; min 44px tap target */}
-            <div className="flex shrink-0 items-center justify-end pl-1 lg:hidden">
+            {/* Mobile menu — compact control; ~40px target with padding for balance */}
+            <div className="flex shrink-0 items-center justify-end pl-0.5 lg:hidden">
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={cn(
-                  "flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-md p-2 text-[#1B2A6B] hover:text-[#D4A843] transition-all cursor-pointer z-[70]",
+                  "flex min-h-10 min-w-10 shrink-0 items-center justify-center rounded-md p-1.5 text-[#1B2A6B] hover:text-[#D4A843] transition-all cursor-pointer z-[70] active:scale-95",
                   isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
                 )}
                 aria-label="Toggle Menu"
               >
-                <Menu size={28} className="shrink-0" strokeWidth={2.25} />
+                <Menu size={26} className="shrink-0" strokeWidth={2.25} />
               </button>
             </div>
           </div>

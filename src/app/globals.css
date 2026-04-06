@@ -51,6 +51,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Fixed navbar: hash links / anchor scroll doesn’t hide under the bar (mobile vs desktop) */
+    scroll-padding-top: 8.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 5.5rem;
+    }
   }
 
   body {

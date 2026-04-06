@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <main className="bg-[#F4EFEA] min-h-screen pb-32 overflow-hidden">
       {/* 1. Cinematic Hero Header */}
-      <section className="pt-48 pb-24 md:pb-32 px-6 border-b border-[#D9D1C7]/60">
+      <section className="pt-36 pb-24 md:pb-32 px-6 border-b border-[#D9D1C7]/60">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
             <div className="flex items-center gap-4 mb-8">

@@ -7,7 +7,7 @@ export default function Programs() {
   return (
     <main className="bg-[#F5F0E8] min-h-screen">
       {/* 3. A True "Hero" Header - Increased padding to account for fixed navbar/enlarged logo */}
-      <section className="border-b border-[#D4A843]/30 px-6 pb-16 pt-40 sm:pt-44 md:pb-32 md:pt-52">
+      <section className="border-b border-[#D4A843]/30 px-6 pb-16 pt-32 sm:pt-36 md:pb-32 md:pt-52">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-6 flex items-center gap-4 md:mb-8">
             <div className="h-[2px] w-16 bg-[#D4A843]" />

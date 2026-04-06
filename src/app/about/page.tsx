@@ -22,7 +22,7 @@ export default function About() {
   return (
     <main className="bg-[#1B2A6B] min-h-screen pb-32 overflow-hidden">
       {/* Hero */}
-      <section className="relative flex min-h-[650px] h-[75vh] items-center justify-center overflow-hidden bg-[#1B2A6B] pt-40 md:pt-48">
+      <section className="relative flex min-h-[650px] h-[75vh] items-center justify-center overflow-hidden bg-[#1B2A6B] pt-32 md:pt-48">
         <Image 
           src="/images/about/hero.png"
           alt="Amal Foundation Legacy"
