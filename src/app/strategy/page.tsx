@@ -1,6 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import { Clock } from "lucide-react";
+import {
+  BarChart3,
+  Clock,
+  Globe2,
+  Handshake,
+  Layers3,
+  type LucideIcon,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function StrategyPage() {
@@ -23,27 +30,31 @@ export default function StrategyPage() {
     }
   ];
 
-  const stage2Features = [
+  const stage2Features: {
+    title: string;
+    desc: string;
+    icon: LucideIcon;
+  }[] = [
     {
       title: "Expand Reach",
       desc: "Grow programs to new regions of Somalia, launch Amal Waqf Fund",
-      img: "https://images.unsplash.com/photo-1602181047856-c07f6c5d6353?w=800&q=80&auto=format&fit=crop"
+      icon: Globe2,
     },
     {
       title: "Build Partnerships",
       desc: "Engage with NGOs, UN agencies, and international donors",
-      img: "https://images.unsplash.com/photo-1737742462464-b26eb948dfeb?w=800&q=80&auto=format&fit=crop"
+      icon: Handshake,
     },
     {
       title: "Strengthen Programs",
       desc: "Scale youth, women, health, and microfinance initiatives",
-      img: "https://images.unsplash.com/photo-1664875882838-c3be520a4fb9?w=800&q=80&auto=format&fit=crop"
+      icon: Layers3,
     },
     {
       title: "Monitor & Report",
       desc: "Publish annual impact reports with verified data",
-      img: "https://images.unsplash.com/photo-1774869221268-885bf68455f4?w=800&q=80&auto=format&fit=crop"
-    }
+      icon: BarChart3,
+    },
   ];
 
   return (
@@ -121,7 +132,9 @@ export default function StrategyPage() {
             </h2>
           </div>
           <div className="flex flex-col gap-12">
-            {stage2Features.map((feature, idx) => (
+            {stage2Features.map((feature, idx) => {
+              const Icon = feature.icon;
+              return (
               <motion.div 
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -131,8 +144,16 @@ export default function StrategyPage() {
                 className={`flex flex-col ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12`}
               >
                 <div className="w-full md:w-1/2">
-                  <div className="h-[250px] md:h-[300px] w-full bg-slate-200 rounded-xl overflow-hidden relative shadow-lg">
-                    <img src={feature.img} alt={feature.title} className="absolute inset-0 w-full h-full object-cover" />
+                  <div
+                    className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-[#1B2A6B]/10 bg-gradient-to-br from-[#F5F0E8] to-[#1B2A6B]/[0.06] shadow-lg md:h-[280px]"
+                    aria-hidden
+                  >
+                    <Icon
+                      className="text-[#D4A843]"
+                      strokeWidth={1.15}
+                      size={120}
+                      aria-hidden
+                    />
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
@@ -147,7 +168,8 @@ export default function StrategyPage() {
                   </p>
                 </div>
               </motion.div>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>
