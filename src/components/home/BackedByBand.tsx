@@ -55,7 +55,9 @@ export function BackedByBand() {
           {/* Tile 1 */}
           <motion.div variants={itemVariants} className="bg-[#1e2f75] border border-white/5 p-8 rounded-xl flex flex-col items-center justify-center text-center hover:bg-[#233580] transition-colors">
             <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">Since 1997</span>
-            <span className="text-white font-body text-sm tracking-wide">Amal Group — heritage in Somalia</span>
+            <span className="text-white font-body text-sm tracking-wide">
+              Amal Group —(Amal Express) heritage in Somalia
+            </span>
           </motion.div>
 
           {/* Tile 2 */}
