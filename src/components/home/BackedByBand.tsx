@@ -60,16 +60,14 @@ export function BackedByBand() {
 
           {/* Tile 2 */}
           <motion.div variants={itemVariants} className="bg-[#1e2f75] border border-white/5 p-8 rounded-xl flex flex-col items-center justify-center text-center hover:bg-[#233580] transition-colors">
-            <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">7 Companies</span>
+            <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">5 Companies</span>
             <div className="flex flex-col gap-1 mt-2">
               {[
-                "Amal Bank",
                 "Amal Express",
-                "Amtel",
-                "MyCash",
-                "Amal Mastercard",
-                "Amal Real Estate & Construction",
+                "Amal Bank",
                 "Amal Trade",
+                "Amtel",
+                "Amal Real Estate & Construction",
               ].map((co) => (
                 <span key={co} className="text-white font-body text-xs tracking-wide leading-relaxed">{co}</span>
               ))}

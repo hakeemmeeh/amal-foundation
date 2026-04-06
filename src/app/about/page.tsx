@@ -11,6 +11,7 @@ export default function About() {
     { name: "Abdidahir Ali Hersi", role: "Director" },
     { name: "Yusuf Ali Juma", role: "Director" },
     { name: "Yusuf Ahmed Dahir", role: "Director" },
+    { name: "Dr Abdiqafar Yasin Farah", role: "Director" },
     { name: "Omar Ali Abdallah", role: "Board Secretary" },
   ];
 
@@ -94,14 +95,9 @@ export default function About() {
                   April 2025
                 </p>
                 <div className="w-12 h-[2px] bg-[#D4A843] mb-8" />
-                <p className="font-display text-2xl text-[#1A1A2E] leading-relaxed italic mb-8 relative z-10">
+                <p className="font-display text-2xl text-[#1A1A2E] leading-relaxed italic relative z-10">
                   &ldquo;It was resolved that the establishment of Amal Foundation, under Amal Group International, to be based in Somalia and branches abroad.&rdquo;
                 </p>
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <p className="font-mono text-sm uppercase text-[#64748B] font-bold">
-                    Signed <br /> Omar Ali Abdallah <br /> Board Secretary
-                  </p>
-                </div>
               </div>
             </motion.div>
           </div>

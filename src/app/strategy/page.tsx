@@ -46,20 +46,6 @@ export default function StrategyPage() {
     }
   ];
 
-  const budget = [
-    { name: "Humanitarian Aid", value: 11000 },
-    { name: "Staff Salaries", value: 8000 },
-    { name: "Operations", value: 6000 },
-    { name: "Economic Dev", value: 5500 },
-    { name: "Micro-financing", value: 5500 },
-    { name: "Admin", value: 5000 },
-    { name: "Vocational Training", value: 5000 },
-    { name: "Scholarships", value: 5000 },
-    { name: "Education/Schools", value: 4000 },
-  ];
-
-  const totalBudget = 50000;
-
   return (
     <main className="min-h-screen">
       {/* HERO */}
@@ -159,46 +145,6 @@ export default function StrategyPage() {
                   <p className="text-slate-600 font-body text-lg leading-relaxed">
                     {feature.desc}
                   </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* BUDGET VISUALIZATION */}
-      <section className="py-24 bg-[#1B2A6B] px-6 text-white">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              $50,000 Operational Budget — 2026 Plan
-            </h2>
-            <p className="text-[#D4A843] font-body text-lg">
-              Budget plan as per Amal Foundation Operational Plan, 1 August 2025
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto flex flex-col gap-6">
-            {budget.map((item, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.05 }}
-              >
-                <div className="flex justify-between text-sm md:text-base font-bold mb-2">
-                  <span>{item.name}</span>
-                  <span className="text-[#D4A843]">${item.value.toLocaleString()}</span>
-                </div>
-                <div className="w-full bg-white/10 h-4 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${(item.value / totalBudget) * 100}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.5 + idx * 0.1 }}
-                    className="h-full bg-[#D4A843]"
-                  />
                 </div>
               </motion.div>
             ))}
