@@ -69,7 +69,7 @@ export default function About() {
                 A Foundation Built on Trust
               </h2>
               <p className="font-body text-[#64748B] text-base leading-relaxed mb-6">
-                Amal Group has built businesses and community commitment in Somalia since 2006. Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia in April 2025, with headquarters at Garowe Main Road, Garowe, Puntland, Somalia.
+                Amal Group has built businesses and community commitment in Somalia since 1997. Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia in April 2025, with headquarters at Garowe Main Road, Garowe, Puntland, Somalia.
               </p>
               <a href="#board" className="text-[#1B2A6B] font-bold uppercase tracking-widest hover:text-[#D4A843] transition-colors border-b-2 border-transparent hover:border-[#D4A843] pb-1">
                 Meet the Board →
@@ -211,7 +211,7 @@ export default function About() {
                 <div className="bg-[#1B2A6B] text-white px-8 md:px-12 py-5 text-lg font-bold rounded-[16px] shadow-xl inline-block">
                   Amal Group Int.
                 </div>
-                <p className="text-xs font-mono font-semibold tracking-widest text-[#64748B] mt-5 uppercase">Parent company · since 2006</p>
+                <p className="text-xs font-mono font-semibold tracking-widest text-[#64748B] mt-5 uppercase">Parent company · since 1997</p>
               </div>
               <div className="w-1 md:w-20 h-16 md:h-[2px] bg-[#D4A843]"></div>
               <div className="text-center z-10">
