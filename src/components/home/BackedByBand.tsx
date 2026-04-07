@@ -42,7 +42,7 @@ export function BackedByBand() {
             Backed by Amal Group&apos;s Legacy in Somalia
           </h2>
           <p className="font-body mx-auto mb-16 max-w-3xl text-base leading-relaxed text-slate-300 md:text-[16px]">
-            Amal Foundation is the charitable arm of Amal Group International Limited — one of Somalia&apos;s established business groups with a diverse portfolio spanning financial services, telecommunications, real estate, and trade. Amal Group has served communities since 1997; the Foundation continues that legacy as its dedicated non-profit arm, incorporated in April 2025.
+            Amal Foundation is the charitable arm of Amal Group International Limited — one of Somalia&apos;s established business groups with a diverse portfolio spanning financial services, telecommunications, real estate, and trade. Amal Group has served communities since 1997; the Foundation continues that legacy as its dedicated non-profit arm, incorporated in 2025.
           </p>
         </motion.div>
 
@@ -78,7 +78,7 @@ export function BackedByBand() {
 
           {/* Tile 3 */}
           <motion.div variants={itemVariants} className="bg-[#1e2f75] border border-white/5 p-8 rounded-xl flex flex-col items-center justify-center text-center hover:bg-[#233580] transition-colors">
-            <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">April 2025</span>
+            <span className="text-[#D4A843] font-display text-4xl md:text-5xl font-bold mb-3">2025</span>
             <span className="text-white font-body text-sm tracking-wide">Amal Foundation incorporated in Somalia</span>
           </motion.div>
         </motion.div>

@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function About() {
   const board = [
-    { name: "Mahamud Haji Abdalle", role: "Chairman" },
+    { name: "Jama Mohamed Issa", role: "Chairman" },
     { name: "Dahir Ismail Mohamed", role: "Vice Chairman" },
-    { name: "Jama Mohamed Issa", role: "Director" },
+    { name: "Mahamud Haji Abdalle", role: "Director" },
     { name: "Abdidahir Ali Hersi", role: "Director" },
     { name: "Yusuf Ali Juma", role: "Director" },
     { name: "Yusuf Ahmed Dahir", role: "Director" },
@@ -70,7 +70,7 @@ export default function About() {
                 A Foundation Built on Trust
               </h2>
               <p className="font-body text-[#64748B] text-base leading-relaxed mb-6">
-                Amal Group has built businesses and community commitment in Somalia since 1997. Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia in April 2025, with headquarters at Garowe Main Road, Garowe, Puntland, Somalia.
+                Amal Group has built businesses and community commitment in Somalia since 1997. Amal Foundation was formally established by the Amal Group Board of Directors and incorporated as a private non-profit foundation in Somalia in 2025, with headquarters at Garowe Main Road, Garowe, Puntland, Somalia.
               </p>
               <a href="#board" className="text-[#1B2A6B] font-bold uppercase tracking-widest hover:text-[#D4A843] transition-colors border-b-2 border-transparent hover:border-[#D4A843] pb-1">
                 Meet the Board →
@@ -92,11 +92,11 @@ export default function About() {
                   Board resolution — Amal Foundation incorporation
                 </h4>
                 <p className="font-mono text-sm text-[#D4A843] font-bold mb-8">
-                  April 2025
+                  2025
                 </p>
                 <div className="w-12 h-[2px] bg-[#D4A843] mb-8" />
                 <p className="font-display text-2xl text-[#1A1A2E] leading-relaxed italic relative z-10">
-                  &ldquo;It was resolved that the establishment of Amal Foundation, under Amal Group International, to be based in Somalia and branches abroad.&rdquo;
+                  &ldquo;It was resolved that the establishment of Amal Foundation, under Amal Group International, to be based in Somalia and abroad.&rdquo;
                 </p>
               </div>
             </motion.div>
@@ -214,7 +214,7 @@ export default function About() {
                 <div className="bg-[#D4A843] text-[#1B2A6B] px-8 md:px-12 py-5 text-lg font-bold rounded-[16px] shadow-xl inline-block">
                   Amal Foundation
                 </div>
-                <p className="text-xs font-mono font-semibold tracking-widest text-[#D4A843] mt-5 uppercase">Charitable arm · Est. Apr 2025</p>
+                <p className="text-xs font-mono font-semibold tracking-widest text-[#D4A843] mt-5 uppercase">Charitable arm · Est. 2025</p>
               </div>
             </div>
           </div>
