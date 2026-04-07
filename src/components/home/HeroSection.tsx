@@ -8,7 +8,7 @@ const impactStats = [
   { label: "Established", value: "2025" },
   { label: "Headquarters", value: "Garowe, Puntland" },
   { label: "Focus areas", value: "4 program pillars" },
-  { label: "Parent organization", value: "Amal Group International" },
+  { label: "Parent organization", value: "Amal Bank" },
 ];
 
 export function HeroSection() {
