@@ -25,7 +25,7 @@ export function ProgramPillars() {
           </div>
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-8 tracking-tighter text-[#1B2A6B]">Core Operational Pillars</h2>
           <p className="text-[#64748B] max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed">
-            Focused, data-driven, and highly localized. We build sustainable programs that dismantle the systemic barriers to progress across Somalia.
+            Focused, data-driven, and highly localized. We build sustainable initiatives that dismantle the systemic barriers to progress across Somalia.
           </p>
         </ScrollReveal>
 
@@ -50,7 +50,7 @@ export function ProgramPillars() {
                   </p>
                   
                   <Link 
-                    href={`/programs/${program.slug}`}
+                    href={`/initiative/${program.slug}`}
                     className="mt-auto inline-flex items-center text-xs font-bold text-[#1B2A6B] uppercase tracking-[0.3em] group/link"
                   >
                     Learn More <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover/link:translate-x-2 text-[#D4A843]" />

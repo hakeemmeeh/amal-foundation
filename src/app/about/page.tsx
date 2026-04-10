@@ -11,7 +11,10 @@ export default function About() {
     { name: "Abdidahir Ali Hersi", role: "Director" },
     { name: "Yusuf Ali Juma", role: "Director" },
     { name: "Yusuf Ahmed Dahir", role: "Director" },
-    { name: "Dr Abdiqafar Yasin Farah", role: "Director" },
+    {
+      name: "Dr Abdiqafar Yasin Farah",
+      role: "Amal Director — Coordination & Outreach",
+    },
     { name: "Omar Ali Abdallah", role: "Board Secretary" },
   ];
 

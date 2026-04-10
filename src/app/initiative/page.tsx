@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-export default function Programs() {
+export default function InitiativePage() {
   return (
     <main className="bg-[#F5F0E8] min-h-screen">
       {/* 3. A True "Hero" Header - Increased padding to account for fixed navbar/enlarged logo */}
@@ -51,7 +51,7 @@ export default function Programs() {
                   {/* Text Container */}
                   <div className="w-full md:w-1/2 flex flex-col justify-center">
                     <span className="text-[#D4A843] font-mono font-bold tracking-widest uppercase text-xs mb-4">
-                      0{index + 1} · Program
+                      0{index + 1} · Initiative
                     </span>
                     <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-[#1B2A6B] tracking-tight">
                       {program.title}
@@ -60,7 +60,7 @@ export default function Programs() {
                       {program.shortDescription}
                     </p>
                     <Link 
-                      href={`/programs/${program.slug}`}
+                      href={`/initiative/${program.slug}`}
                       className="inline-flex items-center text-[#1B2A6B] font-bold hover:text-[#D4A843] uppercase tracking-widest text-sm transition-colors w-fit border-b-2 border-transparent hover:border-[#D4A843] pb-1 group/link"
                     >
                       Explore Initiative <ArrowRight size={20} className="ml-3 transition-transform duration-300 group-hover/link:translate-x-2" />

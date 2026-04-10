@@ -10,7 +10,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function ProgramDetail({ params }: { params: Promise<{ slug: string }> }) {
+export default async function InitiativeDetail({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const program = programs.find((p) => p.slug === resolvedParams.slug);
   
@@ -31,7 +31,7 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
         <div className="absolute inset-0 bg-[#1B2A6B]/80 mix-blend-multiply relative z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A6B]/90 via-transparent to-transparent z-10" />
         <div className="container mx-auto px-6 relative z-20 text-center">
-          <span className="text-[#D4A843] font-mono tracking-widest uppercase text-sm mb-4 block">Program Detail</span>
+          <span className="text-[#D4A843] font-mono tracking-widest uppercase text-sm mb-4 block">Initiative detail</span>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-[#FAFAF5]">
             {program.title}
           </h1>
@@ -40,10 +40,10 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
 
       <div className="container mx-auto px-6 max-w-4xl mt-16">
         <Link 
-          href="/programs" 
+          href="/initiative" 
           className="inline-flex items-center text-[#64748B] hover:text-[#D4A843] mb-12 transition-colors font-medium uppercase tracking-wider text-sm"
         >
-          <ArrowLeft size={16} className="mr-2" /> Back to Programs
+          <ArrowLeft size={16} className="mr-2" /> Back to initiative
         </Link>
 
         <div className="prose prose-lg max-w-none text-[#64748B]">

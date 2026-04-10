@@ -7,7 +7,7 @@ import Image from "next/image";
 const impactStats = [
   { label: "Established", value: "2025" },
   { label: "Headquarters", value: "Garowe, Puntland" },
-  { label: "Focus areas", value: "4 program pillars" },
+  { label: "Focus areas", value: "4 initiative pillars" },
   { label: "Parent organization", value: "Amal Bank" },
 ];
 
@@ -96,10 +96,10 @@ export function HeroSection() {
                 Donate
               </Link>
               <Link
-                href="/programs"
+                href="/initiative"
                 className="inline-flex items-center justify-center rounded-full border-2 border-white/80 bg-transparent px-8 py-4 text-center text-xs font-bold uppercase tracking-widest text-white transition-all hover:border-white hover:bg-white/10"
               >
-                Our programs
+                Our initiative
               </Link>
             </motion.div>
           </div>

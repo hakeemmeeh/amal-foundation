@@ -86,7 +86,7 @@ export const amalFooter7Defaults: Footer7Props = {
       title: "Explore",
       links: [
         { name: "Home", href: "/" },
-        { name: "Programs", href: "/programs" },
+        { name: "Initiative", href: "/initiative" },
         { name: "Get Involved", href: "/get-involved" },
       ],
     },

@@ -88,7 +88,7 @@ export function Navbar() {
         { name: "Our Plan", href: "/strategy" },
       ],
     },
-    { name: "Programs", href: "/programs" },
+    { name: "Initiative", href: "/initiative" },
     { name: "Blog", href: "/blog" },
     {
       name: "Contact",
