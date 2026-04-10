@@ -7,7 +7,7 @@ import Image from "next/image";
 const impactStats = [
   { label: "Established", value: "2025" },
   { label: "Headquarters", value: "Garowe, Puntland" },
-  { label: "Focus areas", value: "4 initiative pillars" },
+  { label: "Focus areas", value: "Our founding initiatives" },
   { label: "Parent organization", value: "Amal Bank" },
 ];
 

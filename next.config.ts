@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
     return [
       { source: "/programs", destination: "/initiative", permanent: true },
       { source: "/programs/:path*", destination: "/initiative/:path*", permanent: true },
+      { source: "/initiative/education-healthcare", destination: "/initiative", permanent: false },
+      { source: "/initiative/humanitarian-relief", destination: "/initiative", permanent: false },
+      { source: "/initiative/financial-inclusion", destination: "/initiative", permanent: false },
+      { source: "/initiative/entrepreneurship", destination: "/initiative", permanent: false },
     ];
   },
   images: {

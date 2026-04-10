@@ -12,14 +12,17 @@ export default function InitiativePage() {
           <div className="mb-6 flex items-center gap-4 md:mb-8">
             <div className="h-[2px] w-16 bg-[#D4A843]" />
             <span className="text-[#D4A843] font-mono tracking-[0.2em] uppercase text-sm font-bold">
-              Our Compass
+              Pilot programs &amp; strategic initiatives
             </span>
           </div>
+          <p className="mb-4 font-mono text-xs font-bold uppercase tracking-[0.25em] text-slate-500 md:text-sm">
+            2024 – 2025 · Nairobi, Kenya
+          </p>
           <h1 className="font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight text-[#1B2A6B] sm:text-5xl md:text-7xl lg:text-8xl">
-            Architecting <br className="hidden md:block" /> Real Impact.
+            Our founding <br className="hidden md:block" /> initiatives
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-slate-600 md:mt-8 md:text-xl lg:text-2xl">
-            We structure our philanthropy around four core pillars designed to dismantle systemic barriers and foster absolute self-reliance.
+            The Amal Foundation launches with three focused pilot programs designed to create measurable, lasting impact across Somali communities. Each initiative builds on the next — starting with partnerships, powered by technology, and anchored in economic empowerment.
           </p>
         </div>
       </section>

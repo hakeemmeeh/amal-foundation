@@ -35,6 +35,11 @@ export default async function InitiativeDetail({ params }: { params: Promise<{ s
           <h1 className="font-display text-4xl md:text-5xl font-bold text-[#FAFAF5]">
             {program.title}
           </h1>
+          {program.subtitle ? (
+            <p className="mx-auto mt-5 max-w-3xl text-base font-light leading-relaxed text-[#FAFAF5]/90 md:text-lg">
+              {program.subtitle}
+            </p>
+          ) : null}
         </div>
       </div>
 
@@ -52,7 +57,9 @@ export default async function InitiativeDetail({ params }: { params: Promise<{ s
           </p>
 
           <div className="bg-white p-8 rounded-sm my-12 border-l-4 border-l-[#D4A843] shadow-sm">
-            <h3 className="font-display text-2xl text-[#1A1A2E] mt-0 mb-6 font-semibold">Key focus areas</h3>
+            <h3 className="font-display text-2xl text-[#1A1A2E] mt-0 mb-6 font-semibold">
+              {program.targetsHeading ?? "Key focus areas"}
+            </h3>
             <ul className="mb-0 space-y-3">
               {program.targets.map((target, idx) => (
                 <li key={idx} className="flex items-start text-[#64748B]">
@@ -61,6 +68,32 @@ export default async function InitiativeDetail({ params }: { params: Promise<{ s
               ))}
             </ul>
           </div>
+
+          {program.sections?.map((section, sidx) => (
+            <div key={sidx} className="my-14">
+              <h3 className="font-display text-2xl text-[#1A1A2E] mb-4 font-semibold">
+                {section.heading}
+              </h3>
+              {section.paragraphs?.map((para, pidx) => (
+                <p
+                  key={pidx}
+                  className="mb-4 text-lg leading-relaxed text-[#64748B] last:mb-0"
+                >
+                  {para}
+                </p>
+              ))}
+              {section.listItems && section.listItems.length > 0 ? (
+                <ul className="mt-4 space-y-3">
+                  {section.listItems.map((item, idx) => (
+                    <li key={idx} className="flex items-start text-[#64748B]">
+                      <span className="mr-3 font-bold text-[#D4A843]">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          ))}
         </div>
       </div>
     </main>

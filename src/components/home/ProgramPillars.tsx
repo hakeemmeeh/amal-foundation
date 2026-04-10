@@ -2,13 +2,12 @@
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { programs } from "@/data/programs";
 import Link from "next/link";
-import { GraduationCap, Heart, Landmark, Rocket, ArrowRight } from "lucide-react";
+import { Users, Laptop, Landmark, ArrowRight } from "lucide-react";
 
 const iconMap = {
-  GraduationCap,
-  Heart,
+  Users,
+  Laptop,
   Landmark,
-  Rocket,
 };
 
 export function ProgramPillars() {
@@ -23,13 +22,15 @@ export function ProgramPillars() {
             </span>
             <div className="h-[2px] w-12 bg-[#D4A843]" />
           </div>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mb-8 tracking-tighter text-[#1B2A6B]">Core Operational Pillars</h2>
+          <h2 className="font-display text-4xl md:text-6xl font-bold mb-8 tracking-tighter text-[#1B2A6B]">
+            Our founding initiatives
+          </h2>
           <p className="text-[#64748B] max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed">
-            Focused, data-driven, and highly localized. We build sustainable initiatives that dismantle the systemic barriers to progress across Somalia.
+            Pilot programs designed for measurable, lasting impact — partnerships first, powered by technology, anchored in economic empowerment.
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {programs.map((program, idx) => {
             const IconComponent = iconMap[program.icon as keyof typeof iconMap];
             return (
