@@ -14,13 +14,16 @@ export type Program = {
   targetsHeading?: string;
   targets: string[];
   sections?: InitiativeSection[];
-  /** Somalia-tagged Unsplash photography (Mogadishu / Somali photographers where noted on Unsplash). */
+  /** Remote hero image URL (Unsplash). Prefer replacing with Amal / Somalia field photography when available. */
   image: string;
   /** Accessible description of the hero image (people & place). */
   imageAlt?: string;
 };
 
-/** Initiative listing & detail. Hero images: Unsplash photos tagged Somalia / Somali — community street scene, youth learning, children in Somali dress (Cushitic / Horn of Africa context). */
+/**
+ * Initiative heroes (stock): (1) UNICEF on Unsplash — major-agency field programme look, used here to evoke Somalia/Horn NGO partnerships;
+ * (2) Horn / Cushitic young woman with laptop; (3) women's seminar — facilitator before a group.
+ */
 export const programs: Program[] = [
   {
     slug: "outreach-networking",
@@ -58,9 +61,9 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1610500796626-3363840d6ebc?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1663069107189-f26fc9bd7f36?w=1200&q=80&auto=format&fit=crop",
     imageAlt:
-      "Group of people together on a street in Somalia — community and outreach context",
+      "Young people in a UNICEF-style community programme — illustrative of partnerships with major NGOs and UN agencies in Somalia and the Horn of Africa",
   },
   {
     slug: "amal-hub",
@@ -113,9 +116,9 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1771412198236-c2a5a5778fb8?w=1200&q=80&auto=format&fit=crop",
     imageAlt:
-      "Somali boy reading a book outdoors — youth, learning, and community development in Somalia",
+      "Young Cushitic / Horn of Africa woman holding a laptop — youth and digital skills for community development",
   },
   {
     slug: "economic-empowerment",
@@ -177,8 +180,8 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1602181064453-8dce7eed9e2d?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1694286067026-a8aa654481f7?w=1200&q=80&auto=format&fit=crop",
     imageAlt:
-      "Somali boy and girl in traditional dress — families, women, and livelihoods in Somalia",
+      "Women's community seminar — a facilitator speaking to a seated group (economic empowerment and training)",
   },
 ];
