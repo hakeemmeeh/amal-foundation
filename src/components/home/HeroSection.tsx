@@ -17,10 +17,10 @@ export function HeroSection() {
       {/* Right hero art — inset from top so faces clear the fixed navbar; crop biased for portrait focal point */}
       <div className="absolute right-0 top-10 z-0 h-[calc(100%-2.5rem)] w-full overflow-hidden sm:top-12 sm:h-[calc(100%-3rem)] md:top-[4.5rem] md:h-[calc(100%-4.75rem)] md:w-1/2 lg:top-24 lg:h-[calc(100%-6rem)]">
         <Image
-          src="/images/home/hero-collage.png"
+          src="/images/home/hero-bg.png"
           alt="Amal Humanitarian Efforts in Somalia"
           fill
-          className="object-cover object-[50%_38%] sm:object-[52%_40%] md:object-[56%_42%]"
+          className="object-cover object-center"
           sizes="(max-width: 768px) 100vw, 50vw"
           priority
         />
