@@ -21,7 +21,8 @@ export type Program = {
 };
 
 /**
- * Initiative listing uses Antigravity-generated images under `/images/programs/` (home hero stays the original collage — see HeroSection).
+ * Initiative heroes under `/images/programs/`: outreach uses a generated scene of Amal + partner NGOs (generic partner signage, no third‑party logos);
+ * other pillars use existing programme art. Home hero: `hero-collage.png` (see HeroSection).
  */
 export const programs: Program[] = [
   {
@@ -59,9 +60,9 @@ export const programs: Program[] = [
         ],
       },
     ],
-    image: "/images/programs/humanitarian-relief.png",
+    image: "/images/programs/outreach-amal-ngo-partners.png",
     imageAlt:
-      "Illustration: humanitarian coordination and community resilience in Somalia — outreach and partnerships",
+      "Amal Foundation and partner NGO teams at a conference table reviewing partnership materials — alliance signage, collaborative planning",
   },
   {
     slug: "amal-hub",
@@ -113,9 +114,9 @@ export const programs: Program[] = [
         ],
       },
     ],
-    image: "/images/programs/entrepreneurship.png",
+    image: "/images/programs/technology-youth-somali-men.png",
     imageAlt:
-      "Illustration: Somali youth, technology, and entrepreneurship — Amal Hub community development",
+      "Somali young men in an Amal Hub technology training session with laptops — male-only youth cohort, digital skills",
   },
   {
     slug: "economic-empowerment",
