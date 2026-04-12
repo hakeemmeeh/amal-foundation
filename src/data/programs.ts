@@ -21,8 +21,8 @@ export type Program = {
 };
 
 /**
- * Initiative heroes (stock): (1) UNICEF on Unsplash — major-agency field programme look, used here to evoke Somalia/Horn NGO partnerships;
- * (2) Horn / Cushitic young woman with laptop; (3) women's seminar — facilitator before a group.
+ * Initiative heroes: Unsplash photos from **Somalia** or **Somali women** searches only (subjects are Somali / Cushitic per platform tagging).
+ * There is no reliable free “Somalia + laptop” stock; the youth image uses Somali children — swap for Amal field photos when you have them.
  */
 export const programs: Program[] = [
   {
@@ -61,9 +61,9 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1663069107189-f26fc9bd7f36?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1610500796626-3363840d6ebc?w=1200&q=80&auto=format&fit=crop",
     imageAlt:
-      "Young people in a UNICEF-style community programme — illustrative of partnerships with major NGOs and UN agencies in Somalia and the Horn of Africa",
+      "Somali (Cushitic) people together on a street in Somalia — community convening and local outreach",
   },
   {
     slug: "amal-hub",
@@ -116,9 +116,9 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1771412198236-c2a5a5778fb8?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1602181047856-c07f6c5d6353?w=1200&q=80&auto=format&fit=crop",
     imageAlt:
-      "Young Cushitic / Horn of Africa woman holding a laptop — youth and digital skills for community development",
+      "Somali (Cushitic) girls and boys in Somalia — youth learning and skills programmes",
   },
   {
     slug: "economic-empowerment",
@@ -180,8 +180,8 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1694286067026-a8aa654481f7?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1743868296213-b1c33fe4924f?w=1200&q=80&auto=format&fit=crop",
     imageAlt:
-      "Women's community seminar — a facilitator speaking to a seated group (economic empowerment and training)",
+      "Somali (Cushitic) women in traditional dress — community gatherings and women's economic empowerment",
   },
 ];
