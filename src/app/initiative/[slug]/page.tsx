@@ -24,7 +24,7 @@ export default async function InitiativeDetail({ params }: { params: Promise<{ s
       <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image 
           src={program.image}
-          alt={program.title}
+          alt={program.imageAlt ?? program.title}
           fill
           className="object-cover"
         />

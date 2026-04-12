@@ -14,10 +14,13 @@ export type Program = {
   targetsHeading?: string;
   targets: string[];
   sections?: InitiativeSection[];
+  /** Somalia-tagged Unsplash photography (Mogadishu / Somali photographers where noted on Unsplash). */
   image: string;
+  /** Accessible description of the hero image (people & place). */
+  imageAlt?: string;
 };
 
-/** Initiative listing & detail content. Listing images: Unsplash scenes chosen to read as Horn of Africa / Cushitic and broader East African community contexts where stock allows. */
+/** Initiative listing & detail. Hero images: Unsplash photos tagged Somalia / Somali — community street scene, youth learning, children in Somali dress (Cushitic / Horn of Africa context). */
 export const programs: Program[] = [
   {
     slug: "outreach-networking",
@@ -55,7 +58,9 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1610500796626-3363840d6ebc?w=1200&q=80&auto=format&fit=crop",
+    imageAlt:
+      "Group of people together on a street in Somalia — community and outreach context",
   },
   {
     slug: "amal-hub",
@@ -108,7 +113,9 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?w=1200&q=80&auto=format&fit=crop",
+    imageAlt:
+      "Somali boy reading a book outdoors — youth, learning, and community development in Somalia",
   },
   {
     slug: "economic-empowerment",
@@ -170,6 +177,8 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1602181064453-8dce7eed9e2d?w=1200&q=80&auto=format&fit=crop",
+    imageAlt:
+      "Somali boy and girl in traditional dress — families, women, and livelihoods in Somalia",
   },
 ];

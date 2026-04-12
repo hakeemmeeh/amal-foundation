@@ -40,7 +40,7 @@ export default function InitiativePage() {
                     <div className="relative w-full aspect-[4/3] md:aspect-square transition-transform duration-1000 ease-out group-hover:scale-105">
                       <Image 
                         src={program.image}
-                        alt={program.title}
+                        alt={program.imageAlt ?? program.title}
                         fill
                         className="object-cover"
                       />

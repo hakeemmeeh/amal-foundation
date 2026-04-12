@@ -98,8 +98,8 @@ export default function About() {
                   </span>
                 </h3>
                 <div className="mb-8 h-[2px] w-12 bg-[#D4A843]" />
-                <p className="font-display text-2xl italic leading-relaxed text-[#1A1A2E]">
-                  &ldquo;It was resolved that the establishment of Amal Foundation, under Amal Group International, to be based in Somalia and abroad.&rdquo;
+                <p className="font-display text-lg italic leading-relaxed text-[#1A1A2E] md:text-xl">
+                  &ldquo;It was resolved that Amal Foundation be established as the charitable arm of Amal Group International Limited — the parent group behind five operating companies: Amal Express, Amal Bank, Amal Trade, Amtel, and Amal Real Estate &amp; Construction — spanning financial services, telecommunications, trade, and real estate, with its mandate to serve communities in Somalia and abroad.&rdquo;
                 </p>
               </div>
             </motion.div>
