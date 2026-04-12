@@ -17,7 +17,7 @@ export type Program = {
   image: string;
 };
 
-/** Initiative listing & detail content — aligned with Amal Foundation Initiatives 2024–2025 (DOC). Images are the existing Unsplash assets used on /initiative only. */
+/** Initiative listing & detail content. Listing images: Unsplash scenes chosen to read as Horn of Africa / Cushitic and broader East African community contexts where stock allows. */
 export const programs: Program[] = [
   {
     slug: "outreach-networking",
@@ -55,11 +55,11 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1646031881272-a914e54af276?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop",
   },
   {
     slug: "amal-hub",
-    title: "Technology for Community Development",
+    title: "Technology for Community Development (Youth)",
     subtitle: "Amal Hub — a digital innovation platform for Somali youth",
     icon: "Laptop",
     shortDescription:
@@ -108,11 +108,11 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1610500795224-fb86b02926d7?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80&auto=format&fit=crop",
   },
   {
     slug: "economic-empowerment",
-    title: "Economic Empowerment & Financial Inclusion",
+    title: "Women Economic Empowerment & Financial Inclusion",
     subtitle: "Amal Bank — ethical finance & community empowerment",
     icon: "Landmark",
     shortDescription:
@@ -170,6 +170,6 @@ export const programs: Program[] = [
       },
     ],
     image:
-      "https://images.unsplash.com/photo-1655104293575-2b3bc063251d?w=800&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=80&auto=format&fit=crop",
   },
 ];

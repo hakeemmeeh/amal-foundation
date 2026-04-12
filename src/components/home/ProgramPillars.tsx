@@ -30,19 +30,19 @@ export function ProgramPillars() {
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-7xl mx-auto">
           {programs.map((program, idx) => {
             const IconComponent = iconMap[program.icon as keyof typeof iconMap];
             return (
               <ScrollReveal key={program.slug} delay={idx * 0.1}>
-                <div className="group bg-[#FAFAF5] p-12 rounded-[32px] border-l-8 border-[#D4A843] shadow-md hover:shadow-2xl transition-all duration-700 h-full flex flex-col items-start text-left relative overflow-hidden">
+                <div className="group bg-[#FAFAF5] p-8 md:p-10 rounded-[32px] border-l-8 border-[#D4A843] shadow-md hover:shadow-2xl transition-all duration-700 h-full flex flex-col items-start text-left relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-48 h-48 bg-[#D4A843]/5 rounded-bl-[120px] -mr-12 -mt-12 transition-transform group-hover:scale-150 duration-700 pointer-events-none" />
                   
                   <div className="bg-[#1B2A6B] w-16 h-16 rounded-2xl flex items-center justify-center mb-10 shadow-lg shadow-[#1B2A6B]/10 transition-all duration-500 group-hover:bg-[#D4A843] group-hover:rotate-[10deg]">
                     <IconComponent className="text-[#FAFAF5]" size={28} />
                   </div>
                   
-                  <h3 className="font-display text-3xl font-bold mb-6 tracking-tight group-hover:text-[#D4A843] transition-colors">
+                  <h3 className="font-display text-xl md:text-2xl xl:text-3xl font-bold mb-6 tracking-tight group-hover:text-[#D4A843] transition-colors">
                     {program.title}
                   </h3>
                   

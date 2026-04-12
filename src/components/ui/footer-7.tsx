@@ -93,8 +93,7 @@ export const amalFooter7Defaults: Footer7Props = {
     {
       title: "About",
       links: [
-        { name: "Who We Are", href: "/about" },
-        { name: "Our Plan", href: "/strategy" },
+        { name: "About", href: "/about" },
         { name: "Blog", href: "/blog" },
       ],
     },

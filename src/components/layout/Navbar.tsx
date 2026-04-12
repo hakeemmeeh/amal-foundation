@@ -80,14 +80,7 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    {
-      name: "About",
-      href: "/about",
-      dropdown: [
-        { name: "Who We Are", href: "/about" },
-        { name: "Our Plan", href: "/strategy" },
-      ],
-    },
+    { name: "About", href: "/about" },
     { name: "Initiative", href: "/initiative" },
     { name: "Blog", href: "/blog" },
     {

@@ -15,9 +15,6 @@ export default function InitiativePage() {
               Pilot programs &amp; strategic initiatives
             </span>
           </div>
-          <p className="mb-4 font-mono text-xs font-bold uppercase tracking-[0.25em] text-slate-500 md:text-sm">
-            2024 – 2025 · Nairobi, Kenya
-          </p>
           <h1 className="font-display text-[2.5rem] font-bold leading-[1.05] tracking-tight text-[#1B2A6B] sm:text-5xl md:text-7xl lg:text-8xl">
             Our founding <br className="hidden md:block" /> initiatives
           </h1>
