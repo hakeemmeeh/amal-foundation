@@ -2,7 +2,6 @@ import { programs } from "@/data/programs";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { SomaliaMapBackdrop } from "@/components/maps/SomaliaMapBackdrop";
 
 export default function InitiativePage() {
   return (
@@ -39,12 +38,11 @@ export default function InitiativePage() {
                   {/* Image Container */}
                   <div className="w-full md:w-1/2 overflow-hidden rounded-[24px] shadow-2xl relative group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-700 ease-out">
                     <div className="relative w-full aspect-[4/3] md:aspect-square transition-transform duration-1000 ease-out group-hover:scale-105">
-                      {program.somaliaMapBackdrop ? <SomaliaMapBackdrop variant="card" /> : null}
                       <Image
                         src={program.image}
                         alt={program.imageAlt ?? program.title}
                         fill
-                        className={`object-cover ${program.somaliaMapBackdrop ? "z-[1]" : ""}`}
+                        className="object-cover"
                       />
                     </div>
                     <div className="absolute inset-0 bg-[#1B2A6B]/10 transition-colors duration-500 group-hover:bg-transparent" />

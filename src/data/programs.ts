@@ -18,8 +18,6 @@ export type Program = {
   image: string;
   /** Accessible description of the hero image (people & place). */
   imageAlt?: string;
-  /** Show a faint Somalia map layer behind the initiative image. */
-  somaliaMapBackdrop?: boolean;
 };
 
 /**
@@ -65,29 +63,28 @@ export const programs: Program[] = [
     image: "/images/programs/outreach-amal-ngo-partners.png",
     imageAlt:
       "Amal Foundation and partner NGO teams at a conference table reviewing partnership materials — alliance signage, collaborative planning",
-    somaliaMapBackdrop: true,
   },
   {
     slug: "amal-hub",
     title: "Technology for Community Development (Youth)",
-    subtitle: "Amal Hub — a digital innovation platform for Somali youth",
+    subtitle: "Amal Hub — a technology innovation platform for Somali youth",
     icon: "Laptop",
     shortDescription:
-      "Amal Hub — digital skills, training, and innovation. Remote-first and diaspora-powered, focused on practical, income-ready skills for Somali youth.",
+      "Amal Hub — technology skills, training, and innovation. Remote-first and diaspora-powered, focused on practical, income-ready skills for Somali youth.",
     fullDescription:
-      "The Amal Hub is the Foundation's flagship technology initiative — a purpose-built digital innovation and training platform for Somali youth. It serves as the nerve centre for digital skills, entrepreneurship, and community-driven technology, accessible both locally in Nairobi and to the wider diaspora. Amal Hub operates on a remote-first, diaspora-powered model — bringing world-class instruction and mentorship directly to youth regardless of their location. The platform is practical and income-focused, built around the principle that technology is the most accessible pathway out of unemployment for young Somalis today.",
+      "The Amal Hub is the Foundation's flagship technology initiative — a purpose-built technology innovation and training platform for Somali youth. It serves as the nerve centre for technology skills, entrepreneurship, and community-driven technology, accessible both locally in Nairobi and to the wider diaspora. Amal Hub operates on a remote-first, diaspora-powered model — bringing world-class instruction and mentorship directly to youth regardless of their location. The platform is practical and income-focused, built around the principle that technology is the most accessible pathway out of unemployment for young Somalis today.",
     targetsHeading: "What participants learn",
     targets: [
       "Freelancing: how to build and market a profile on global platforms and land paying clients remotely",
       "Coding fundamentals: foundational programming skills applicable to web development, data, and automation",
-      "Digital marketing: social media strategy, content creation, paid advertising, and analytics",
+      "Technology marketing: social media strategy, content creation, paid advertising, and analytics",
       "Financial tools: setting up and using Amal Express wallet to receive international payments",
     ],
     sections: [
       {
-        heading: "Digital skills bootcamp for Somali youth",
+        heading: "Technology skills bootcamp for Somali youth",
         paragraphs: [
-          "An intensive digital skills programme targeting Somali youth, delivered through a structured online curriculum with live instruction, peer learning, and a capstone Demo Day. The bootcamp delivers practical, market-ready skills that translate directly into earning potential from the moment of completion.",
+          "An intensive technology skills programme targeting Somali youth, delivered through a structured online curriculum with live instruction, peer learning, and a capstone Demo Day. The bootcamp delivers practical, market-ready skills that translate directly into earning potential from the moment of completion.",
         ],
       },
       {
@@ -112,14 +109,14 @@ export const programs: Program[] = [
       {
         heading: "The Amal Hub difference",
         paragraphs: [
-          "Unlike one-off training events, the Amal Hub is a living platform. Every graduate becomes a permanent member of a growing alumni network. Over time this community becomes a talent pool, a referral network, and the foundation of a full-scale digital innovation hub — creating a lasting technology ecosystem for Somali youth.",
+          "Unlike one-off training events, the Amal Hub is a living platform. Every graduate becomes a permanent member of a growing alumni network. Over time this community becomes a talent pool, a referral network, and the foundation of a full-scale technology innovation hub — creating a lasting technology ecosystem for Somali youth.",
           "Amal Hub is not a programme. It is an ecosystem.",
         ],
       },
     ],
     image: "/images/programs/technology-youth-somali-men.png",
     imageAlt:
-      "Somali young men in an Amal Hub technology training session with laptops — male-only youth cohort, digital skills",
+      "Somali young men in an Amal Hub technology training session with laptops — male-only youth cohort, technology skills",
   },
   {
     slug: "economic-empowerment",
