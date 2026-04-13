@@ -18,6 +18,8 @@ export type Program = {
   image: string;
   /** Accessible description of the hero image (people & place). */
   imageAlt?: string;
+  /** Show a faint Somalia map layer behind the initiative image. */
+  somaliaMapBackdrop?: boolean;
 };
 
 /**
@@ -63,6 +65,7 @@ export const programs: Program[] = [
     image: "/images/programs/outreach-amal-ngo-partners.png",
     imageAlt:
       "Amal Foundation and partner NGO teams at a conference table reviewing partnership materials — alliance signage, collaborative planning",
+    somaliaMapBackdrop: true,
   },
   {
     slug: "amal-hub",

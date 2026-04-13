@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function About() {
   const board = [
-    { name: "Jama Mohamed Issa", role: "Chairman" },
+    { name: "Jama Mohamed Issa", role: "Director" },
     { name: "Dahir Ismail Mohamed", role: "Director" },
     { name: "Mahamud Haji Abdalle", role: "Director" },
     { name: "Abdidahir Ali Hersi", role: "Director" },

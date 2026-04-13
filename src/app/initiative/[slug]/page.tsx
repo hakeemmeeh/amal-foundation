@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import { SomaliaMapBackdrop } from "@/components/maps/SomaliaMapBackdrop";
 
 export function generateStaticParams() {
   return programs.map((p) => ({
@@ -22,11 +23,12 @@ export default async function InitiativeDetail({ params }: { params: Promise<{ s
     <main className="bg-[#FAFAF5] min-h-screen pb-20">
       {/* Hero */}
       <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <Image 
+        {program.somaliaMapBackdrop ? <SomaliaMapBackdrop /> : null}
+        <Image
           src={program.image}
           alt={program.imageAlt ?? program.title}
           fill
-          className="object-cover"
+          className={`object-cover ${program.somaliaMapBackdrop ? "z-[1]" : ""}`}
         />
         <div className="absolute inset-0 bg-[#1B2A6B]/80 mix-blend-multiply relative z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A6B]/90 via-transparent to-transparent z-10" />
