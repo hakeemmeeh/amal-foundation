@@ -1,24 +1,67 @@
 /**
- * Decorative Somalia silhouette for initiative heroes — sits behind the photo layer.
+ * Somalia-only silhouette (approx. Horn shape — excludes Ethiopia).
+ * Underlay behind the photo + soft blend on the upper “wall” area of the photo.
  */
-export function SomaliaMapBackdrop() {
+function SomaliaMapSilhouette({ className }: { className?: string }) {
   return (
-    <div
-      className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-[#1B2A6B]"
+    <svg
+      className={className}
+      viewBox="0 0 100 138"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
       aria-hidden
     >
-      <svg
-        className="absolute left-1/2 top-1/2 h-[135%] min-h-full w-auto min-w-[115%] -translate-x-1/2 -translate-y-1/2 text-[#D4A843]"
-        viewBox="0 0 100 128"
-        preserveAspectRatio="xMidYMid slice"
-        xmlns="http://www.w3.org/2000/svg"
+      <path
+        fill="currentColor"
+        d="M 54 1.5 L 62 2.8 71 7 79 15 85 26 88.5 40 89.5 56 87 73 81 90 71.5 105 58.5 118 42.5 128 24.5 133.5 12 129 4 117 1.5 100 3.5 82 9.5 64 19 47 31 33 42 22 48 12 Z"
+      />
+    </svg>
+  );
+}
+
+type SomaliaMapBackdropProps = {
+  /** `hero` = initiative detail; `card` = listing tiles */
+  variant?: "hero" | "card";
+};
+
+export function SomaliaMapBackdrop({ variant = "hero" }: SomaliaMapBackdropProps) {
+  const isHero = variant === "hero";
+  const wallMask = isHero
+    ? "linear-gradient(to bottom, black 0%, black 52%, transparent 78%)"
+    : "linear-gradient(to bottom, black 0%, black 40%, transparent 70%)";
+
+  return (
+    <>
+      {/* Layer under photo */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-[#1B2A6B]"
+        aria-hidden
       >
-        <path
-          fill="currentColor"
-          fillOpacity={0.22}
-          d="M 52 3 C 58 2.5 64 4 70 7.5 C 76 11 81 17 84.5 24 C 88 31 89.5 39.5 89.5 48.5 C 89.5 58 87.5 67.5 83.5 76.5 C 79.5 85.5 73.5 93.5 65.5 100 C 57.5 106.5 47.5 111 36.5 112.5 C 25.5 114 14.5 111.5 7 104.5 C 1 97.5 0 86 3.5 75.5 C 7 65 14 55.5 22.5 47.5 C 31 39.5 41 33 51 28 C 47.5 22 46 15 48 9.5 C 49 6.5 51 4.2 52 3 Z"
+        <SomaliaMapSilhouette
+          className={
+            isHero
+              ? "absolute left-1/2 top-1/2 h-[135%] min-h-full w-auto min-w-[115%] -translate-x-1/2 -translate-y-1/2 text-[#D4A843] opacity-30"
+              : "absolute left-1/2 top-1/2 h-[120%] min-h-full w-auto min-w-[110%] -translate-x-1/2 -translate-y-1/2 text-[#D4A843] opacity-25"
+          }
         />
-      </svg>
-    </div>
+      </div>
+      {/* Map blended onto light wall area of the photo (opaque PNG hides underlay alone) */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[2]"
+        style={{
+          maskImage: wallMask,
+          WebkitMaskImage: wallMask,
+        }}
+        aria-hidden
+      >
+        <SomaliaMapSilhouette
+          className={
+            isHero
+              ? "absolute left-1/2 top-[18%] h-[92%] w-auto min-w-[92%] max-w-[125%] -translate-x-1/2 text-[#D4A843] opacity-[0.55] mix-blend-soft-light"
+              : "absolute left-1/2 top-[16%] h-[78%] w-auto min-w-[85%] -translate-x-1/2 text-[#D4A843] opacity-[0.48] mix-blend-soft-light"
+          }
+        />
+      </div>
+    </>
   );
 }

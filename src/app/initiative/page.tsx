@@ -39,7 +39,7 @@ export default function InitiativePage() {
                   {/* Image Container */}
                   <div className="w-full md:w-1/2 overflow-hidden rounded-[24px] shadow-2xl relative group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-700 ease-out">
                     <div className="relative w-full aspect-[4/3] md:aspect-square transition-transform duration-1000 ease-out group-hover:scale-105">
-                      {program.somaliaMapBackdrop ? <SomaliaMapBackdrop /> : null}
+                      {program.somaliaMapBackdrop ? <SomaliaMapBackdrop variant="card" /> : null}
                       <Image
                         src={program.image}
                         alt={program.imageAlt ?? program.title}

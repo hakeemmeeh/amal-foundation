@@ -23,7 +23,7 @@ export default async function InitiativeDetail({ params }: { params: Promise<{ s
     <main className="bg-[#FAFAF5] min-h-screen pb-20">
       {/* Hero */}
       <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        {program.somaliaMapBackdrop ? <SomaliaMapBackdrop /> : null}
+        {program.somaliaMapBackdrop ? <SomaliaMapBackdrop variant="hero" /> : null}
         <Image
           src={program.image}
           alt={program.imageAlt ?? program.title}
