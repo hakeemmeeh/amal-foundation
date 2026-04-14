@@ -5,23 +5,17 @@ import Image from "next/image";
 
 export default function About() {
   const board = [
-    { name: "Jama Mohamed Issa", role: "Director" },
-    { name: "Dahir Ismail Mohamed", role: "Director" },
-    { name: "Mahamud Haji Abdalle", role: "Director" },
     {
       name: "Abdidahir Ali Hersi",
       role: "Director Amal Bank Board",
       position: "Member",
     },
     { name: "Ugas Osman Hasan", role: "CEO Amal Bank", position: "Member" },
-    { name: "Yusuf Ali Juma", role: "Director" },
-    { name: "Yusuf Ahmed Dahir", role: "Director" },
     {
       name: "Dr Abdiqafar Yasin Farah",
       role: "Director Amal Bank Board",
       position: "Chairman",
     },
-    { name: "Omar Ali Abdallah", role: "Board Secretary" },
   ];
 
   const fadeUp = {
