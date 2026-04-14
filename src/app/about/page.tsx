@@ -10,6 +10,7 @@ export default function About() {
       role: "Director Amal Bank Board",
       position: "Chairman",
     },
+    { name: "Omar Ali Abdallah", role: "Board Secretary" },
     {
       name: "Abdidahir Ali Hersi",
       role: "Director Amal Bank Board",
@@ -193,7 +194,7 @@ export default function About() {
             </span>
             <h2 className="font-display text-4xl font-bold text-white md:text-5xl">Board of Directors</h2>
           </div>
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 md:grid-cols-3 md:gap-14">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-12">
             {board.map((member, idx) => (
               <div
                 key={idx}
