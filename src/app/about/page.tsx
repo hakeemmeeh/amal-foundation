@@ -10,13 +10,13 @@ export default function About() {
       role: "Director Amal Bank Board",
       position: "Chairman",
     },
-    { name: "Omar Ali Abdallah", role: "Board Secretary" },
     {
       name: "Abdidahir Ali Hersi",
       role: "Director Amal Bank Board",
       position: "Member",
     },
     { name: "Ugas Osman Hasan", role: "CEO Amal Bank", position: "Member" },
+    { name: "Omar Ali Abdallah", role: "Board Secretary" },
   ];
 
   const fadeUp = {
