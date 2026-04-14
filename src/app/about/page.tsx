@@ -8,10 +8,19 @@ export default function About() {
     { name: "Jama Mohamed Issa", role: "Director" },
     { name: "Dahir Ismail Mohamed", role: "Director" },
     { name: "Mahamud Haji Abdalle", role: "Director" },
-    { name: "Abdidahir Ali Hersi", role: "Director" },
+    {
+      name: "Abdidahir Ali Hersi",
+      role: "Director Amal Bank Board",
+      position: "Member",
+    },
+    { name: "Ugas Osman Hasan", role: "CEO Amal Bank", position: "Member" },
     { name: "Yusuf Ali Juma", role: "Director" },
     { name: "Yusuf Ahmed Dahir", role: "Director" },
-    { name: "Dr Abdiqafar Yasin Farah", role: "Director" },
+    {
+      name: "Dr Abdiqafar Yasin Farah",
+      role: "Director Amal Bank Board",
+      position: "Chairman",
+    },
     { name: "Omar Ali Abdallah", role: "Board Secretary" },
   ];
 
@@ -202,9 +211,12 @@ export default function About() {
                 <h4 className="mb-3 font-display text-xl font-semibold leading-tight text-[#1B2A6B]">
                   {member.name}
                 </h4>
-                <p className="font-mono text-xs font-bold uppercase tracking-widest text-[#D4A843]">
-                  {member.role}
-                </p>
+                <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#D4A843]">
+                  <p>{member.role}</p>
+                  {member.position ? (
+                    <p className="mt-1 text-[11px] text-[#1B2A6B]">{member.position}</p>
+                  ) : null}
+                </div>
               </div>
             ))}
           </div>
