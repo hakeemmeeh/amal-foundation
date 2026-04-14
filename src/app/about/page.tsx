@@ -6,16 +6,16 @@ import Image from "next/image";
 export default function About() {
   const board = [
     {
+      name: "Dr Abdiqafar Yasin Farah",
+      role: "Director Amal Bank Board",
+      position: "Chairman",
+    },
+    {
       name: "Abdidahir Ali Hersi",
       role: "Director Amal Bank Board",
       position: "Member",
     },
     { name: "Ugas Osman Hasan", role: "CEO Amal Bank", position: "Member" },
-    {
-      name: "Dr Abdiqafar Yasin Farah",
-      role: "Director Amal Bank Board",
-      position: "Chairman",
-    },
   ];
 
   const fadeUp = {
@@ -193,11 +193,11 @@ export default function About() {
             </span>
             <h2 className="font-display text-4xl font-bold text-white md:text-5xl">Board of Directors</h2>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 md:grid-cols-3 md:gap-14">
             {board.map((member, idx) => (
               <div
                 key={idx}
-                className="rounded-[24px] border border-white/10 bg-[#F5F0E8] p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="rounded-[24px] border border-white/10 bg-[#F5F0E8] p-10 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#1B2A6B]/5">
                   <Users className="h-8 w-8 text-[#1B2A6B]" />
