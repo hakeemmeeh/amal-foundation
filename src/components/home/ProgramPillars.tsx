@@ -2,12 +2,13 @@
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { programs } from "@/data/programs";
 import Link from "next/link";
-import { Users, Laptop, Landmark, ArrowRight } from "lucide-react";
+import { Users, Laptop, Landmark, Sprout, ArrowRight } from "lucide-react";
 
 const iconMap = {
   Users,
   Laptop,
   Landmark,
+  Sprout,
 };
 
 export function ProgramPillars() {
@@ -30,7 +31,7 @@ export function ProgramPillars() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 max-w-7xl mx-auto">
           {programs.map((program, idx) => {
             const IconComponent = iconMap[program.icon as keyof typeof iconMap] || Users;
             return (

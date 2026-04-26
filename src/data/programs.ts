@@ -181,4 +181,41 @@ export const programs: Program[] = [
     imageAlt:
       "Illustration: women, finance, and livelihoods — economic empowerment and Sharia-compliant inclusion",
   },
+  {
+    slug: "sustainable-agriculture",
+    title: "Sustainable Agriculture & Food Security",
+    subtitle: "Solar irrigation, climate resilience, and Somali food sovereignty",
+    icon: "Sprout",
+    shortDescription:
+      "Empowering Somali farmers with modern irrigation, climate-resilient crops, and solar-powered technology to ensure long-term food sovereignty.",
+    fullDescription:
+      "Food security is not only about feeding today; it is about protecting tomorrow. Through this initiative, Amal Foundation supports smallholder farmers to shift from fragile, rain-dependent production to modern, sustainable systems rooted in climate resilience and local ownership. By scaling solar-powered irrigation, restoring soil stewardship, and strengthening seed access, we help farming communities increase yields while reducing vulnerability to drought, fuel shocks, and seasonal disruption. The goal is clear: a dignified agricultural future where Somali households can rely on stable local harvests, youth can build livelihoods in agri-tech, and communities move closer to long-term food sovereignty.",
+    targetsHeading: "Priority outcomes",
+    targets: [
+      "Transition 500+ smallholder farms to solar-powered drip irrigation",
+      "Establish regional seed banks for climate-resilient indigenous crops",
+      "Provide Sharia-compliant equipment financing for youth-led agri-tech startups",
+    ],
+    sections: [
+      {
+        heading: "What this initiative delivers",
+        listItems: [
+          "Solar irrigation systems that reduce diesel dependency and improve year-round water access",
+          "Practical farmer training on water efficiency, soil health, crop rotation, and post-harvest handling",
+          "Community demonstration farms to validate climate-smart techniques in local conditions",
+          "Women- and youth-inclusive producer groups for stronger market access and collective resilience",
+        ],
+      },
+      {
+        heading: "Why this matters now",
+        paragraphs: [
+          "Recurring drought cycles and volatile input costs continue to place Somali farming communities under pressure. Sustainable agriculture offers a pathway out of emergency dependency by building local production systems that are technically sound, economically viable, and environmentally responsible.",
+          "By combining ethical finance, modern irrigation, and indigenous crop resilience, Amal Foundation aims to transform agriculture from a survival activity into a scalable engine of household stability and community prosperity.",
+        ],
+      },
+    ],
+    image: "/images/programs/agriculture-system.png",
+    imageAlt:
+      "Somali farmers using solar-powered irrigation infrastructure in a climate-resilient agricultural system",
+  },
 ];

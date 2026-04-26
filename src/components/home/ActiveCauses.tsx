@@ -27,6 +27,15 @@ const activeCauses = [
     goal: 10000,
     raised: 4500,
   },
+  {
+    id: 4,
+    title: "Solar Irrigation for Lower Shabelle",
+    description:
+      "Help equip farming communities with solar-powered irrigation infrastructure that expands harvest seasons and protects food security.",
+    image: "/images/programs/agriculture-harvest.png",
+    goal: 35000,
+    raised: 6200,
+  },
 ];
 
 export function ActiveCauses() {
@@ -38,7 +47,7 @@ export function ActiveCauses() {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-[#1B2A6B]">Organization Causes</h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {activeCauses.map((cause, idx) => {
             const percent = Math.round((cause.raised / cause.goal) * 100);
             return (

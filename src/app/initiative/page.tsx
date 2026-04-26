@@ -19,7 +19,7 @@ export default function InitiativePage() {
             Our founding <br className="hidden md:block" /> initiatives
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-slate-600 md:mt-8 md:text-xl lg:text-2xl">
-            The Amal Foundation launches with three focused pilot programs designed to create measurable, lasting impact across Somali communities. Each initiative builds on the next — starting with partnerships, powered by technology, and anchored in economic empowerment.
+            Amal Foundation advances four focused initiatives designed to deliver measurable, lasting impact across Somali communities. Each initiative reinforces the others — from strategic partnerships and youth technology to economic empowerment and climate-resilient agriculture.
           </p>
         </div>
       </section>
