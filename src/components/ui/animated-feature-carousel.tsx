@@ -1,6 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export type ImageSet = {
@@ -58,7 +59,7 @@ export function FeatureCarousel({ image }: FeatureCarouselProps) {
             setActiveStep((prev) => (prev + 1) % steps.length);
         }, 5000);
         return () => clearInterval(timer);
-    }, []);
+    }, [steps.length]);
 
     return (
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -75,10 +76,12 @@ export function FeatureCarousel({ image }: FeatureCarouselProps) {
                     >
                         {/* Primary Image */}
                         <div className="absolute inset-0 bg-white rounded-[40px] overflow-hidden shadow-2xl border border-[#D9D1C7]/30">
-                            <img 
-                                src={steps[activeStep].img1} 
-                                alt={steps[activeStep].title} 
-                                className="w-full h-full object-cover"
+                            <Image
+                                src={steps[activeStep].img1}
+                                alt={steps[activeStep].title}
+                                fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="object-cover"
                             />
                             <div className="absolute inset-0 bg-[#050A1F]/20" />
                         </div>
@@ -89,10 +92,12 @@ export function FeatureCarousel({ image }: FeatureCarouselProps) {
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute -right-8 -bottom-8 w-48 md:w-72 h-48 md:h-72 bg-white rounded-[32px] overflow-hidden shadow-2xl border-4 border-white hidden md:block"
                         >
-                            <img 
-                                src={steps[activeStep].img2} 
-                                alt="Detail" 
-                                className="w-full h-full object-cover"
+                            <Image
+                                src={steps[activeStep].img2}
+                                alt="Detail"
+                                fill
+                                sizes="(max-width: 768px) 0px, 288px"
+                                className="object-cover"
                             />
                         </motion.div>
                     </motion.div>
