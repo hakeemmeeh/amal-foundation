@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans, DM_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
 import "./globals.css";
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display" });
@@ -9,6 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-bo
 const dmMono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.amalfoundation.org"),
   title: {
     default: "Amal Foundation — Transforming Lives Across Somalia",
     template: "%s | Amal Foundation",
@@ -25,13 +27,27 @@ export const metadata: Metadata = {
     "zakat Somalia",
     "Amal Group International",
   ],
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Amal Foundation",
-    description: "Transforming lives across Somalia through education, healthcare, and economic empowerment.",
-    url: "https://amalfoundation.org",
+    description:
+      "Transforming lives across Somalia through education, healthcare, and economic empowerment.",
+    url: "https://www.amalfoundation.org",
     siteName: "Amal Foundation",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amal Foundation — Transforming Lives Across Somalia",
+    description:
+      "Transforming lives across Somalia through education, healthcare, and economic empowerment.",
+  },
+  other: {
+    "geo.region": "SO-N",
+    "geo.placename": "Garowe, Puntland, Somalia",
+    "geo.position": "8.4054;48.4845",
+    ICBM: "8.4054, 48.4845",
   },
 };
 
@@ -45,6 +61,8 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${plusJakarta.variable} ${dmMono.variable} antialiased`}
       >
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
         <Navbar />
         {children}
         <Footer />

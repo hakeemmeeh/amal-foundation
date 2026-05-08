@@ -4,37 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, User } from "lucide-react";
+import { posts } from "@/data/posts";
 
 export default function BlogPage() {
-  const posts = [
-    {
-      id: "1",
-      title: "Community Upliftment in Garowe: A New Chapter",
-      excerpt: "Our recent mission to Garowe has successfully launched the first phase of our community development project, focusing on clean water and local markets.",
-      date: "August 15, 2025",
-      author: "Foundation Field Team",
-      tag: "Development",
-      image: "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-      id: "2",
-      title: "Empowering Somali Students Through Digital Literacy",
-      excerpt: "Technical education is the backbone of future growth. Read how our new computer lab in Mogadishu is changing lives for over 200 youths.",
-      date: "July 22, 2025",
-      author: "Amal Foundation Team",
-      tag: "Education",
-      image: "/images/about/school.png"
-    },
-    {
-      id: "3",
-      title: "Healthcare on Wheels: The Impact of Our Mobile Clinics",
-      excerpt: "In remote areas, healthcare is a luxury. Our mobile ambulance units are bringing critical medical aid to mothers and children across the rural regions.",
-      date: "July 10, 2025",
-      author: "Medical Outreach Team",
-      tag: "Healthcare",
-      image: "/images/about/health.png"
-    }
-  ];
 
   return (
     <main className="min-h-screen bg-white pb-32">

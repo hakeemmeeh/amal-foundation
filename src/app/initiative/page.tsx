@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { programs } from "@/data/programs";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Our Initiatives — Education, Technology, Finance & Agriculture",
+  description:
+    "Explore Amal Foundation's four founding initiatives: Outreach & Networking, Amal Hub technology training, Women's Economic Empowerment, and Sustainable Agriculture.",
+  path: "/initiative",
+  keywords: [
+    "Somalia initiatives",
+    "Amal Hub technology Somalia",
+    "Somalia agriculture program",
+    "women empowerment Somalia",
+    "Somalia foundation programs",
+  ],
+});
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";

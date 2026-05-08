@@ -1,8 +1,27 @@
+import type { Metadata } from "next";
+import { buildMetadata, SITE_URL } from "@/lib/seo";
 import { programs } from "@/data/programs";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const program = programs.find((p) => p.slug === slug);
+  if (!program) return {};
+  return buildMetadata({
+    title: program.title,
+    description: program.fullDescription.slice(0, 160),
+    path: `/initiative/${program.slug}`,
+    keywords: ["Somalia initiative", program.title, "Amal Foundation program"],
+  });
+}
 
 export function generateStaticParams() {
   return programs.map((p) => ({
@@ -20,6 +39,13 @@ export default async function InitiativeDetail({ params }: { params: Promise<{ s
 
   return (
     <main className="bg-[#FAFAF5] min-h-screen pb-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Initiatives", url: `${SITE_URL}/initiative` },
+          { name: program.title, url: `${SITE_URL}/initiative/${program.slug}` },
+        ]}
+      />
       {/* Hero */}
       <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image

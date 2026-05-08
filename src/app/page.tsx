@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { HeroSection } from "@/components/home/HeroSection";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Amal Foundation — Transforming Lives Across Somalia",
+  description:
+    "Amal Foundation delivers education, healthcare, humanitarian relief, and economic empowerment across Somalia. Backed by Amal Group International since 1997.",
+  path: "/",
+  keywords: [
+    "donate Somalia",
+    "Somalia NGO",
+    "Somali humanitarian aid",
+    "Islamic charity Somalia",
+    "Puntland development",
+  ],
+});
 import { MissionBand } from "@/components/home/MissionBand";
 import { ProgramPillars } from "@/components/home/ProgramPillars";
 import { BackedByBand } from "@/components/home/BackedByBand";

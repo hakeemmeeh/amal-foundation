@@ -1,4 +1,19 @@
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Contact Amal Foundation — Garowe, Puntland, Somalia",
+  description:
+    "Reach Amal Foundation at our Garowe headquarters. Contact us for donation enquiries, volunteer opportunities, partnerships, or general questions.",
+  path: "/contact",
+  keywords: [
+    "contact Amal Foundation",
+    "Amal Foundation email",
+    "Somalia NGO contact",
+    "Garowe foundation address",
+  ],
+});
 import { Mail, MapPin, Phone, ArrowRight } from "lucide-react";
 
 export default function Contact() {
