@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { posts } from "@/data/posts";
 
+export function generateStaticParams() {
+  return posts.map((p) => ({ id: p.id }));
+}
+
 export async function generateMetadata({
   params,
 }: {

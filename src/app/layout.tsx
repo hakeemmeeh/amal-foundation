@@ -3,14 +3,20 @@ import { Playfair_Display, Plus_Jakarta_Sans, DM_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display" });
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-body" });
 const dmMono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
 
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.amalfoundation.org"),
+  metadataBase: new URL(SITE_URL),
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
   title: {
     default: "Amal Foundation — Transforming Lives Across Somalia",
     template: "%s | Amal Foundation",
@@ -32,7 +38,7 @@ export const metadata: Metadata = {
     title: "Amal Foundation",
     description:
       "Transforming lives across Somalia through education, healthcare, and economic empowerment.",
-    url: "https://www.amalfoundation.org",
+    url: SITE_URL,
     siteName: "Amal Foundation",
     locale: "en_US",
     type: "website",
