@@ -31,7 +31,7 @@ function NavbarLogo({ menuOpen = false }: { menuOpen?: boolean }) {
           priority
         />
       ) : (
-        <div className="absolute inset-0 max-md:origin-[12%_50%] max-md:scale-[1.42] md:scale-100">
+        <div className="absolute inset-0 max-md:origin-[12%_50%] max-md:scale-[1.42] max-md:pl-0 md:scale-100 md:pl-0 lg:pl-5">
           <Image
             src="/images/logo.png"
             alt="Amal Foundation"
@@ -104,12 +104,12 @@ export function Navbar() {
         )}
       >
         <div
-          className="container mx-auto max-w-[100vw] max-lg:overflow-x-clip pl-2.5 pr-3 sm:px-6 sm:pr-6 max-lg:pt-[max(0px,env(safe-area-inset-top))] max-lg:pb-0.5"
+          className="container mx-auto max-w-[100vw] max-lg:overflow-x-clip pl-4 pr-3 sm:px-6 max-lg:pt-[max(0px,env(safe-area-inset-top))] max-lg:pb-0.5 lg:pl-12 lg:pr-8"
         >
           <div className="flex min-h-0 items-center justify-between gap-1.5 overflow-visible lg:h-14 lg:min-h-0 lg:gap-2 lg:py-0">
             <Link
               href="/"
-              className="relative z-[65] flex min-w-0 flex-1 items-center overflow-visible [-webkit-tap-highlight-color:transparent] lg:z-10 lg:block lg:min-w-0 lg:flex-none"
+              className="relative z-[65] flex min-w-0 flex-1 items-center overflow-visible [-webkit-tap-highlight-color:transparent] lg:z-10 lg:block lg:min-w-0 lg:flex-none lg:pl-1"
             >
               <NavbarLogo />
             </Link>
